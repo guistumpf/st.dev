@@ -21,7 +21,11 @@ setinput("")
 }
 
 function excluir(){
-settarefas([])
+const confirmed = confirm("Tem certeza que deseja apagar tudo?")
+  
+if(confirmed){
+  settarefas([])
+}
 }
 
 
@@ -37,7 +41,6 @@ return(
       console.log(e.target.value)
     }}></input>
     <button onClick={add}>Add</button>
-<button onClick={excluir}>Delete all</button>
     <ul>
     {tarefas.map((tarefas:any) => (
       <li key={tarefas}>
@@ -45,7 +48,10 @@ return(
       </li>
     ))}
     </ul>
-  </section>
+  {tarefas.length > 0 &&(
+    <button onClick={excluir}>Delete all</button>
+  )}
+    </section>
     </div>
     </>
 
