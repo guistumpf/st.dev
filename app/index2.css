@@ -139,5 +139,21 @@ padding: 2px;
 .insta{
   position: absolute;
   width: 45px;
-  top: 920px
+  top: 910px;
+  left: 1px;
+}
+
+
+.contato{
+  position: absolute;
+  top: 870px;
+  color: white;
+  left: 10px;
+}
+
+.texto3{
+  margin-top: 10px;
+   margin: 6px 0 0 10px;
+   font-size: 13px;
+   color: white;
 }

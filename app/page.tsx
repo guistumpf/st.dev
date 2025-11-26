@@ -31,12 +31,13 @@ export default function App() {
       </button>
 
       <nav className={classmenu}>
-  
+
         <Link href={"/lista"} className="navtext">Lista de Tarefas</Link>
         <Link href={"/contador"} className="navtext">Contador</Link>
         <h1 className="navtext">Suporte</h1>
-       <a href="https://github.com/guistumpf">
-         <h1  className="navinsta"><img src="pngwing.com.png" alt="insta" className="insta"/></h1>
+        <h1 className="contato">Redes Sociais</h1>
+        <a href="https://github.com/guistumpf">
+          <h1 className="navinsta"><img src="pngwing.com.png" alt="insta" className="insta" /></h1>
         </a>
       </nav>
 
@@ -58,8 +59,12 @@ export default function App() {
           <span></span>
           <span></span>
           <p className="texto2">
-            Clique na barrinha no canto superior esquerdo da página e veja meus projetos!
-          </p>
+            Clique na barrinha no canto superior esquerdo da página e teste meus projetos!
+        
+    </p>
+    <p className="texto3">
+      *Todos os projetos (e esse site) são um WIP
+    </p>
         </div>
       </div>
 
