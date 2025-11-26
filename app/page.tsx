@@ -31,9 +31,13 @@ export default function App() {
       </button>
 
       <nav className={classmenu}>
-        <Link href={"/lista"}>Try this one!</Link>
-        <h1>Sobre</h1>
-        <h1>Suporte</h1>
+  
+        <Link href={"/lista"} className="navtext">Lista de Tarefas</Link>
+        <Link href={"/contador"} className="navtext">Contador</Link>
+        <h1 className="navtext">Suporte</h1>
+       <a href="https://github.com/guistumpf">
+         <h1  className="navinsta"><img src="pngwing.com.png" alt="insta" className="insta"/></h1>
+        </a>
       </nav>
 
       <section>
