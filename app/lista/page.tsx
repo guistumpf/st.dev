@@ -1,3 +1,4 @@
+
 "use client"
 import './index.css';
 import Link from "next/link"
@@ -36,7 +37,7 @@ export default function oi(){
 
 return(
  <>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"></meta>
+   
 <div className='corpo'>
 
   <section className='Container'>
