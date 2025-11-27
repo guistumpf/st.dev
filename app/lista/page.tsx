@@ -10,17 +10,31 @@ import { json } from 'stream/consumers';
 
 export default function oi(){
   
-  const [input,setinput] = useState<string>("")
-  const router = useRouter();
- 
-const [tarefas, settarefas] = useState<string[]>([]);
 
-useEffect(() => {
-  const tarefasSalvas = localStorage.getItem("tarefas");
-  if (tarefasSalvas) {
-    settarefas(JSON.parse(tarefasSalvas));
-  }
-}, []);
+  
+  const [tarefas, settarefas] = useState<string[]>([])
+  const [input, setinput] = useState<string>("")
+  // 1. Nova variável para controlar se já carregou do banco
+  const [primeiroCarregamento, setPrimeiroCarregamento] = useState(false) 
+  const router = useRouter();
+  
+  // 2. useEffect de CARREGAR (Lê os dados ao abrir)
+  useEffect(() => {
+    const dados = localStorage.getItem("tarefas")
+    if (dados) {
+      settarefas(JSON.parse(dados))
+    }
+    setPrimeiroCarregamento(true) // Avisa que terminou de carregar
+  }, [])
+
+  // 3. useEffect de SALVAR (Só salva se já tiver carregado)
+  useEffect(() => {
+    if (primeiroCarregamento) { // A TRAVA: Se não carregou ainda, não salva nada!
+      localStorage.setItem('tarefas', JSON.stringify(tarefas))
+    }
+  }, [tarefas, primeiroCarregamento])
+
+  // ... o resto das suas funções (add, excluir, return) continua igual ...
   
   function add(){
     if(input.trim() === ""){
@@ -42,10 +56,6 @@ useEffect(() => {
   }
  
 
-useEffect( ()=> {
-localStorage.setItem('tarefas', JSON.stringify(tarefas) )
-},[tarefas]
-)
 
 
 
