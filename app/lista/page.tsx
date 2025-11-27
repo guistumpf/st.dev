@@ -67,10 +67,10 @@ export default function oi() {
                 {tarefas}
               </li>
             ))}
-          </ul>
-          {tarefas.length > 0 && (
-            <button onClick={excluir} className='del'>Delete all</button>
-          )}
+          </ul> 
+            {tarefas.length > 0 && (
+              <button onClick={excluir} className='del'>Limpar 🗑️</button>
+            )}
         </section>
       </div>
     </>
