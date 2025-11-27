@@ -5,11 +5,12 @@ import Link from "next/link"
 import {useRouter} from 'next/navigation';
 
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { json } from 'stream/consumers';
 
 export default function oi(){
   
-  const [tarefas,settarefas] = useState<string[]>([])
+  const [tarefas,settarefas] = useState<string[]>(() => JSON.parse(localStorage.getItem("tarefas") || "[]"))
   const [input,setinput] = useState<string>("")
   const router = useRouter();
   
@@ -32,6 +33,13 @@ export default function oi(){
     }
   }
  
+
+useEffect( ()=> {
+localStorage.setItem('tarefas', JSON.stringify(tarefas) )
+},[tarefas]
+)
+
+
 
   
 
