@@ -4,7 +4,7 @@
 }
 
 body{
-  background-color: #121212;
+  background-color: #000000;
   min-height: 100vh;
 
 }
@@ -108,7 +108,7 @@ padding: 2px;
     left: -250px; /* Começa escondido */
     width: 250px;
     height: 100vh;
-    background-color: #333;
+    background-color: #121212;
     padding-top: 80px;
     transition: 0.4s;
     display: flex;
