@@ -38,8 +38,13 @@ export default function App() {
         <h1 className="contato">Redes Sociais</h1>
         <a href="https://github.com/guistumpf">
           <h1 className="navinsta"><img src="pngwing.com.png" alt="insta" className="insta" /></h1>
-        </a>
-      </nav>
+      
+      </a>
+      <a href="https://wa.me/qr/BCLRCFVD5KQNH1">
+          <h1 className="zap"><img src="—Pngtree—white whatsapp icon png vector_3562063.png" alt="" className="zapfoda" /></h1>
+      </a>
+    </nav>
+         
 
       <section>
         <h1 className="head">Meus Sites</h1>
