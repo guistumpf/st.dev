@@ -10,9 +10,17 @@ import { json } from 'stream/consumers';
 
 export default function oi(){
   
-  const [tarefas,settarefas] = useState<string[]>(() => JSON.parse(localStorage.getItem("tarefas") || "[]"))
   const [input,setinput] = useState<string>("")
   const router = useRouter();
+ 
+const [tarefas, settarefas] = useState<string[]>([]);
+
+useEffect(() => {
+  const tarefasSalvas = localStorage.getItem("tarefas");
+  if (tarefasSalvas) {
+    settarefas(JSON.parse(tarefasSalvas));
+  }
+}, []);
   
   function add(){
     if(input.trim() === ""){
