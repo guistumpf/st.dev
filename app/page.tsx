@@ -35,7 +35,7 @@ export default function App() {
 
         <Link href={"/lista"} className="navtext">Lista de Tarefas</Link>
         <Link href={"/contador"} className="navtext">Contador</Link>
-        <h1 className="navtext">Suporte</h1>
+        <h1 className="navtext"></h1>
         <h1 className="contato">Redes Sociais</h1>
         <a href="https://github.com/guistumpf">
           <h1 className="navigit"><img src="pngegg(1).png" alt="github" className="github" /></h1>
