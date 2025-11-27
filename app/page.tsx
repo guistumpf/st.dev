@@ -21,6 +21,7 @@ export default function App() {
     classmenu = "menu-lateral aberto"
   }
 
+
   return (
     <>
 
@@ -37,11 +38,14 @@ export default function App() {
         <h1 className="navtext">Suporte</h1>
         <h1 className="contato">Redes Sociais</h1>
         <a href="https://github.com/guistumpf">
-          <h1 className="navinsta"><img src="pngwing.com.png" alt="insta" className="insta" /></h1>
+          <h1 className="navigit"><img src="pngegg(1).png" alt="github" className="github" /></h1>
       
       </a>
       <a href="https://wa.me/qr/BCLRCFVD5KQNH1">
           <h1 className="zap"><img src="—Pngtree—white whatsapp icon png vector_3562063.png" alt="" className="zapfoda" /></h1>
+      </a>
+      <a href="https://www.instagram.com/gui.st0/">
+        <h1 className="instanav"><img src="pngegg.png" alt="insta" className="insta"/></h1>
       </a>
     </nav>
          
