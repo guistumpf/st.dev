@@ -5,11 +5,12 @@ import Link from "next/link"
 import {useRouter} from 'next/navigation';
 
 
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"
+import { json } from 'stream/consumers';
 
 export default function oi(){
   
-  const [tarefas,settarefas] = useState<any[]>([])
+  const [tarefas,settarefas] = useState<string[]>(() => JSON.parse(localStorage.getItem("tarefas") || "[]"))
   const [input,setinput] = useState<string>("")
   const router = useRouter();
   
@@ -33,26 +34,12 @@ export default function oi(){
   }
  
 
-
 useEffect( ()=> {
-  if (typeof window === 'undefined') return;
-  localStorage.setItem('tarefas', JSON.stringify(tarefas) )
+localStorage.setItem('tarefas', JSON.stringify(tarefas) )
 },[tarefas]
 )
 
 
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-    try {
-      const saved = localStorage.getItem('tarefas');
-      if (saved) settarefas(JSON.parse(saved));
-    } catch (e) {
-      console.warn('Failed to parse tarefas from localStorage', e);
-    }
-  }, []);
-
-
-  
 
 return(
  <>
