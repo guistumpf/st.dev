@@ -10,7 +10,7 @@ import { json } from 'stream/consumers';
 
 export default function oi(){
   
-  const [tarefas,settarefas] = useState<string[]>(() => JSON.parse(localStorage.getItem("tarefas") || "[]"))
+  const [tarefas,settarefas] = useState<any[]>(() => JSON.parse(localStorage.getItem("tarefas") || "[]"))
   const [input,setinput] = useState<string>("")
   const router = useRouter();
   
@@ -55,7 +55,7 @@ return(
       setinput(e.target.value)
       console.log(e.target.value)
     }} placeholder='Digite Uma Tarefa!'></input>
-    <button onClick={add}>Add</button>
+    <button onClick={add} className='add'>Add</button>
     <ul>
     {tarefas.map((tarefas:any) => (
       <li key={tarefas}>
@@ -64,7 +64,7 @@ return(
     ))}
     </ul>
   {tarefas.length > 0 &&(
-    <button onClick={excluir}>Delete all</button>
+    <button onClick={excluir} className='del'>Delete all</button>
   )}
     </section>
     </div>
