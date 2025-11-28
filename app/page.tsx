@@ -44,6 +44,8 @@ if(classmenu === "menu-lateral aberto"){
         <Link href={"/contador"} className="navtext">Contador</Link>
         <h1 className="navtext"></h1>
         <h1 className="contato">Redes Sociais</h1>
+       <div className="box-icones">
+
         <a href="https://github.com/guistumpf">
           <h1 className="navigit"><img src="pngegg(1).png" alt="github" className="github" /></h1>
       
@@ -54,6 +56,7 @@ if(classmenu === "menu-lateral aberto"){
       <a href="https://vercel.com/guistumpf">
         <h1 className="vercelnav"><img src="Vercel_Symbol_1.png" alt="vercel" className="vercel"/></h1>
       </a>
+       </div>
     </nav>
          
 

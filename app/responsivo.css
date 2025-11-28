@@ -62,34 +62,39 @@
     left: 0;
   }
 
-  /* --- 6. Ícones e Rodapé do Menu (A CORREÇÃO DOS ÍCONES) --- */
-  /* Removemos o 'top' fixo e prendemos eles no 'bottom' (fundo) */
+/* --- 6. Ícones e Rodapé (ALINHAMENTO PERFEITO) --- */
   
+  /* Posiciona o título "Redes Sociais" */
   .contato {
     font-size: 24px;
-    top: auto; /* Anula o top do desktop */
-    bottom: 80px; /* Fica acima dos ícones */
-    left: 20px;
+    top: auto;
+    bottom: 90px; /* Um pouco acima dos ícones */
+    left: 0; 
+    width: 100%;
+    text-align: center; /* Centraliza o texto */
   }
 
-  .github {
-    top: auto;
-    bottom: 30px; /* Prende no fundo */
-    left: 20px;
-    width: 40px; /* Um pouco maior pro dedo */
-  }
-
-  .zapfoda {
-    top: auto;
-    bottom: 25px; /* Ajuste fino pra alinhar */
-    left: 80px; /* Ao lado do github */
-    width: 65px; 
-  }
-
-  .vercel {
-    top: auto;
+  /* A nova caixa que criamos */
+  .box-icones {
+    position: absolute;
     bottom: 30px;
-    left: 160px; /* Ao lado do zap */
-    width: 35px;
+    width: 100%; /* Ocupa toda a largura do menu */
+    display: flex; /* Ativa o modo flexível */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente (alinha o meio dos ícones) */
+    gap: 30px; /* Espaço igual entre cada ícone */
+    left: 0;
   }
+
+  /* Resetamos as imagens para elas obedecerem a caixa flex */
+  .github, .zapfoda, .vercel {
+    position: static !important; /* Desliga o position: absolute antigo */
+    margin: 0 !important;
+    inset: auto !important; /* Remove top/left/bottom antigos */
+  }
+
+  /* Ajuste fino dos tamanhos para ficarem visivelmente parecidos */
+  .github { width: 40px; }
+  .zapfoda { width: 55px; } /* O zap costuma ser maior no arquivo original */
+  .vercel { width: 35px; }
 }
