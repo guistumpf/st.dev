@@ -1,15 +1,22 @@
 "use client"
 import { useRouter } from "next/navigation"
 import "./index3.css"
-import { use, useState } from "react"
+import { use, useEffect, useState } from "react"
 
 export default function Contador() {
 
-    const [numero, setnumero] = useState<number>(0)
+    const [numero, setnumero] = useState<number>(+localStorage.getItem("numero") || 0)
 const router = useRouter();
 
 
     let cor
+
+useEffect(() =>{
+    localStorage.setItem('numero', numero.toString())
+})
+
+
+
 
     function add() {
         setnumero(numero + 1)
