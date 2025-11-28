@@ -6,21 +6,20 @@
   }
 
   /* --- 2. O Layout Principal (Hero) --- */
-  /* Removemos o 'fixed' para o site rolar naturalmente no celular */
   .hero {
-    position: relative; /* Muda de fixed para relative/static */
-    inset: 0; /* Zera as posições antigas (bottom/left) */
-    flex-direction: column; /* Coloca um item embaixo do outro */
-    align-items: center; /* Centraliza tudo */
+    position: relative;
+    inset: 0;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     padding: 20px;
     margin-top: 20px;
-    padding-bottom: 100px; /* Espaço pro scroll final */
+    padding-bottom: 120px; /* Espaço extra para não cortar no fim */
   }
 
   /* --- 3. A Imagem (Kanye) --- */
   .kanye {
-    width: 70%; /* Fica proporcional a tela */
+    width: 70%;
     max-width: 280px;
     height: auto;
     object-fit: contain;
@@ -30,12 +29,12 @@
   /* --- 4. Os Textos --- */
   .hero-text {
     width: 100%;
-    text-align: center; /* Centraliza o texto */
+    text-align: center;
   }
 
   .subtitulo {
     font-size: 32px;
-    padding-left: 0; /* Remove recuo lateral */
+    padding-left: 0;
   }
 
   .texto, .texto2 {
@@ -51,8 +50,46 @@
     margin-bottom: 20px;
   }
 
-  /* --- 5. Menu Lateral Mobile --- */
+  /* --- 5. Menu Lateral Mobile (A CORREÇÃO) --- */
   .menu-lateral {
-    width: 85%; /* Menu ocupa mais espaço no celular para facilitar o toque */
+    width: 85%;
+    /* Correção: Esconde 100% da largura, não importa o tamanho */
+    left: -100%; 
+  }
+  
+  /* Mantém aberto quando tiver a classe */
+  .menu-lateral.aberto {
+    left: 0;
+  }
+
+  /* --- 6. Ícones e Rodapé do Menu (A CORREÇÃO DOS ÍCONES) --- */
+  /* Removemos o 'top' fixo e prendemos eles no 'bottom' (fundo) */
+  
+  .contato {
+    font-size: 24px;
+    top: auto; /* Anula o top do desktop */
+    bottom: 80px; /* Fica acima dos ícones */
+    left: 20px;
+  }
+
+  .github {
+    top: auto;
+    bottom: 30px; /* Prende no fundo */
+    left: 20px;
+    width: 40px; /* Um pouco maior pro dedo */
+  }
+
+  .zapfoda {
+    top: auto;
+    bottom: 25px; /* Ajuste fino pra alinhar */
+    left: 80px; /* Ao lado do github */
+    width: 65px; 
+  }
+
+  .vercel {
+    top: auto;
+    bottom: 30px;
+    left: 160px; /* Ao lado do zap */
+    width: 35px;
   }
 }
