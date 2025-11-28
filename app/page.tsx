@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { use, useState } from "react";
 import "./index2.css"
+import "./responsivo.css"
 
 export default function App() {
 
@@ -10,7 +11,7 @@ export default function App() {
 
 
 
-
+let cor
   function mudarmenu() {
     setmenu(!menuaberto)
   }
@@ -21,11 +22,17 @@ export default function App() {
     classmenu = "menu-lateral aberto"
   }
 
+if(classmenu === "menu-lateral aberto"){
+  cor = "pink"
+}
+
+
+
 
   return (
     <>
 
-      <button className="hamburguer" onClick={mudarmenu}>
+      <button className={`hamburguer ${menuaberto && 'aberto'}`} onClick={mudarmenu}>
         <span className="linha"></span>
         <span className="linha"></span>
         <span className="linha"></span>

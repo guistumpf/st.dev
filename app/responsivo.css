@@ -1,0 +1,58 @@
+@media (max-width: 950px) {
+  /* --- 1. Cabeçalho --- */
+  .head {
+    font-size: 35px;
+    padding-top: 15px;
+  }
+
+  /* --- 2. O Layout Principal (Hero) --- */
+  /* Removemos o 'fixed' para o site rolar naturalmente no celular */
+  .hero {
+    position: relative; /* Muda de fixed para relative/static */
+    inset: 0; /* Zera as posições antigas (bottom/left) */
+    flex-direction: column; /* Coloca um item embaixo do outro */
+    align-items: center; /* Centraliza tudo */
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+    padding-bottom: 100px; /* Espaço pro scroll final */
+  }
+
+  /* --- 3. A Imagem (Kanye) --- */
+  .kanye {
+    width: 70%; /* Fica proporcional a tela */
+    max-width: 280px;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 20px;
+  }
+
+  /* --- 4. Os Textos --- */
+  .hero-text {
+    width: 100%;
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .subtitulo {
+    font-size: 32px;
+    padding-left: 0; /* Remove recuo lateral */
+  }
+
+  .texto, .texto2 {
+    font-size: 16px;
+    width: 100%;
+    max-width: 100%;
+    margin: 15px 0;
+    padding: 0 10px;
+  }
+  
+  .texto3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  /* --- 5. Menu Lateral Mobile --- */
+  .menu-lateral {
+    width: 85%; /* Menu ocupa mais espaço no celular para facilitar o toque */
+  }
+}
