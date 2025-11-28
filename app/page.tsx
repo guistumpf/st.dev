@@ -31,7 +31,7 @@ if(classmenu === "menu-lateral aberto"){
 
   return (
     <>
-
+<link rel="icon" href="/e1497514ab168e36120bb64668dbc7af.ico" sizes="any" />
       <button className={`hamburguer ${menuaberto && 'aberto'}`} onClick={mudarmenu}>
         <span className="linha"></span>
         <span className="linha"></span>

@@ -87,7 +87,7 @@
   }
 
   /* Resetamos as imagens para elas obedecerem a caixa flex */
-  .github, .zapfoda, .vercel {
+  .github, .zapfoda, .vercel  {
     position: static !important; /* Desliga o position: absolute antigo */
     margin: 0 !important;
     inset: auto !important; /* Remove top/left/bottom antigos */
