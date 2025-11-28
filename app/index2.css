@@ -179,7 +179,7 @@ section {
 
 }
 
-.instanav {
+.vercelnav {
   font-size: 30px;
   margin: 7px;
   text-decoration: none;
@@ -187,9 +187,9 @@ section {
   color: white;
 }
 
-.insta {
+.vercel {
   position: absolute;
-  width: 60px;
-  top: 913px;
-  left: 100px;
+  width: 30px;
+  top: 918px;
+  left: 112px;
 }

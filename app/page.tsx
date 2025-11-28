@@ -44,14 +44,14 @@ export default function App() {
       <a href="https://wa.me/qr/BCLRCFVD5KQNH1">
           <h1 className="zap"><img src="—Pngtree—white whatsapp icon png vector_3562063.png" alt="" className="zapfoda" /></h1>
       </a>
-      <a href="https://www.instagram.com/gui.st0/">
-        <h1 className="instanav"><img src="pngegg.png" alt="insta" className="insta"/></h1>
+      <a href="https://vercel.com/guistumpf">
+        <h1 className="vercelnav"><img src="Vercel_Symbol_1.png" alt="vercel" className="vercel"/></h1>
       </a>
     </nav>
          
 
       <section>
-        <h1 className="head">Meus Sites</h1>
+        <h1 className="head">st.dev</h1>
       </section>
       <div className="hero">
         <img src="/image1.png" alt="something" className="kanye" />
