@@ -67,4 +67,10 @@ color: rgb(255, 255, 255)
     border-radius: 2px;
     background-color: cadetblue;
 cursor: pointer;
+
+}
+
+
+.add:hover{
+    background-color: white;
 }
