@@ -56,6 +56,7 @@ setCarregado(true)
 
             <div className="corpo2">
 
+<a href="https://github.com/guistumpf/contador-next" className="fonte">Código fonte</a>
                 <section className="section">
                     <h1 className="titulo">Contador</h1>
                     <p style={{ color: cor }} className="numero">{numero}</p>
