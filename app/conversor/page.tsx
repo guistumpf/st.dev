@@ -25,6 +25,7 @@ console.log(valor)
   return(
     <div className="bodyporra">
 
+<a href="https://github.com/guistumpf/conversor-next" className="fonte">Código fonte</a>
   <img src="klipartz.com.png" alt="voltar" className='back' onClick={() => router.back()}/> 
     <section className="caixaconv">
       <h1 className="conv">Conversor de temperaturas</h1>
