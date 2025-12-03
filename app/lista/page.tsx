@@ -53,7 +53,7 @@ export default function oi() {
 
           
          <img src="klipartz.com.png" alt="voltar" className='back' onClick={() => router.back()}/> 
-
+<a href="https://github.com/guistumpf/lista-next" className='fonte'>Código Fonte</a>
         <section className='Container'>
           <h1>Lista De Tarefas</h1>
           <input value={input} onChange={(e) => {
