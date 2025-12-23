@@ -46,8 +46,18 @@ export default function oi() {
     }
   }
 
+function ex({ index }: { index: number; }){
+ const novas = tarefas.filter((_, i)=> i !== index)
+
+settarefas(novas)
+}
+
+
+
+
   return (
     <>
+
 
       <div className='corpo'>
 
@@ -62,9 +72,10 @@ export default function oi() {
           }} placeholder='Digite Uma Tarefa!'></input>
           <button onClick={add} className='add'>Add</button>
           <ul>
-            {tarefas.map((tarefas: any) => (
+            {tarefas.map((tarefas: any, index) => (
               <li key={tarefas}>
                 {tarefas}
+              <button className='btnex' onClick={() => ex({ index })}>❌</button>
               </li>
             ))}
           </ul> 
