@@ -87,9 +87,8 @@ if(classmenu === "menu-lateral aberto"){
     </p>
         </div>
       </div>
-
-
-    </>
+      
+    </> 
   )
-
+ 
 }
