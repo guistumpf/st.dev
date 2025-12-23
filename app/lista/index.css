@@ -82,3 +82,19 @@ cursor: pointer;
   left: 8px;
   color: white;
 }
+
+.btnex{
+    padding: 0px;
+    font-size: 13px;
+    margin-left: 10px;
+    border: 1px black solid;
+    background-color: rgb(71, 67, 67);
+cursor: pointer;
+transition: transform 0.4s;
+}
+
+.btnex:hover{
+    transform: scale(1.1);
+    background-color: #ffffff;
+    border-color: rgb(210, 101, 101);
+}

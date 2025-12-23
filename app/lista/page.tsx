@@ -75,12 +75,12 @@ settarefas(novas)
             {tarefas.map((tarefas: any, index) => (
               <li key={tarefas}>
                 {tarefas}
-              <button className='btnex' onClick={() => ex({ index })}>❌</button>
+              <button className='btnex' onClick={() => ex({ index })} title='Excluir tarefa'>❌</button>
               </li>
             ))}
           </ul> 
-            {tarefas.length > 0 && (
-              <button onClick={excluir} className='del'>Limpar 🗑️</button>
+            {tarefas.length > 1 && (
+              <button onClick={excluir} className='del' title='Apagar Lista'>Limpar 🗑️</button>
             )}
         </section>
       </div>
