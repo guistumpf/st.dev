@@ -85,6 +85,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  padding-top: 6px;
 }
 
 .linha {
