@@ -1,9 +1,10 @@
 'use client'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function PPT() {
     const [esmaquina, setmaquina] = useState("")
 const [escuser, setuser] = useState("")
+const [resultado, setResultado] = useState("")
 
     function random() {
         const maquina = ['✌️', '✊', '🤚']
@@ -18,13 +19,27 @@ const [escuser, setuser] = useState("")
   
  function jogar(escolhauser: any){
 setuser(escolhauser)
- 
+ random()
 
 } 
 
-if(escuser === "✊" && esmaquina === "✌️" ){
-    alert("voce venceu")
-}
+useEffect(() => {
+  // Só roda se ambos escolheram algo
+  if (!escuser || !esmaquina) return
+
+  if (escuser === esmaquina) {
+    setResultado("Empate")
+  } else if (
+    (escuser === "✊" && esmaquina === "🤚") ||
+    (escuser === "🤚" && esmaquina === "✌️") ||
+    (escuser === "✌️" && esmaquina === "✊")
+  ) {
+    setResultado("Você perdeu")
+  } else {
+    setResultado("Você venceu")
+  }
+}, [escuser, esmaquina])
+
 
 console.log(escuser)
     
@@ -34,7 +49,7 @@ return (
    <button onClick={() => jogar("✊")}>✊</button>
 <button onClick={() => jogar("🤚")}>🤚</button>
 <button onClick={() => jogar("✌️")}>✌️</button>
-
+<h3>{resultado}</h3>
  </>
 )
 
