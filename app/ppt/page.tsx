@@ -94,8 +94,10 @@ export default function PPT() {
 
 
         if (confirmed) {
-            localStorage.clear()
-            setvitorias(0)
+            localStorage.removeItem("vitorias")
+             localStorage.removeItem("derrotas")
+         localStorage.removeItem("empates")
+             setvitorias(0)
             setderrotas(0)
             setempates(0)
         }

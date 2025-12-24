@@ -27,6 +27,12 @@ padding: 10px 20px;
     cursor: pointer;
  }
 
+.dadobut:hover{
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+
  .dadosra{
 font-size: 100px;
 margin: 20px;
@@ -56,8 +62,30 @@ margin: 20px;
     margin: 0px;
     padding: 10px;
 list-style: none; 
+color: black;
+}
+
+.lidado{
+    color: black;
+    list-style: none;
 }
 
  .h3dado{
     margin-bottom: 0px;
  }
+
+ .resetdado{
+     margin-top: 4px;
+    border: 1px solid black;
+    background-color: whitesmoke;
+    cursor: pointer;
+ }
+
+ .back{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+ width: 18px;
+ cursor: pointer;
+ 
+}
