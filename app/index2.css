@@ -193,3 +193,17 @@ section {
   top: 918px;
   left: 112px;
 }
+
+.sopc{
+  display: none;
+  margin-top: 10px;
+  margin: 6px 0 0 10px;
+  font-size: 16px;
+  color: white;
+}
+
+@media (min-width: 768px){
+  .sopc {
+    display: block;
+  }
+}

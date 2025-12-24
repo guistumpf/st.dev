@@ -53,10 +53,3 @@ transition: transform 0.4s;
     font-size: 35px;    
 }
 
-.fonte{
-  font-size: 17px;
-  position: absolute;
-  bottom: 4px;
-  left: 8px;
-  color: white;
-}

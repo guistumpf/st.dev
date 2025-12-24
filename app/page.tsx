@@ -85,6 +85,7 @@ if(classmenu === "menu-lateral aberto"){
     <p className="texto3">
       *Todos os projetos (e esse site) são um WIP
     </p>
+    <p className="sopc" >*Se o site ficar desalinhado tenta colocar 75% na lupa do pc</p>
         </div>
       </div>
       
