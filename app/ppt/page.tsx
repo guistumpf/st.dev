@@ -2,7 +2,8 @@
 import { useState } from "react";
 
 export default function PPT() {
-    const [esmaquina, setmaquina] = useState(null)
+    const [esmaquina, setmaquina] = useState("")
+const [escuser, setuser] = useState("")
 
     function random() {
         const maquina = ['✌️', '✊', '🤚']
@@ -10,15 +11,31 @@ export default function PPT() {
         const random = Math.floor(escolha)
         const escolhamaquina = maquina[random]
         console.log(escolhamaquina)
-        return escolhamaquina
+        setmaquina(escolhamaquina)
     }
     
-    
 
+  
+ function jogar(escolhauser: any){
+setuser(escolhauser)
+ 
+
+} 
+
+if(escuser === "✊" && esmaquina === "✌️" ){
+    alert("voce venceu")
+}
+
+console.log(escuser)
+    
 return (
     <>
-    <button onClick={random}>aaqa</button>
-    </>
+    <h1>{esmaquina}</h1>
+   <button onClick={() => jogar("✊")}>✊</button>
+<button onClick={() => jogar("🤚")}>🤚</button>
+<button onClick={() => jogar("✌️")}>✌️</button>
+
+ </>
 )
 
 }
