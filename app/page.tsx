@@ -39,10 +39,10 @@ if(classmenu === "menu-lateral aberto"){
       </button>
 
       <nav className={classmenu}>
-<Link href={"/ppt"}>oioioioio</Link>
         <Link href={"/lista"} className="navtext">Lista de Tarefas</Link>
         <Link href={"/contador"} className="navtext">Contador</Link>
        <Link href={"/conversor"} className="navtext">Conversor</Link>
+<Link href={"/ppt"} className="navtext">PPT</Link>
         <h1 className="navtext"></h1>
         <h1 className="contato">Redes Sociais</h1>
        <div className="box-icones">

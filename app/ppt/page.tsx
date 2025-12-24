@@ -1,8 +1,10 @@
 'use client'
 import { useState, useEffect } from "react";
 import "./index5.css"
+import { useRouter } from "next/navigation";
 
 export default function PPT() {
+    // Estados
     const [esmaquina, setmaquina] = useState("")
     const [escuser, setuser] = useState("")
     const [resultado, setResultado] = useState("Faça sua jogada!")
@@ -13,6 +15,9 @@ export default function PPT() {
     const [vitorias, setvitorias] = useState(0)
     const [empates, setempates] = useState(0)
     const [derrotas, setderrotas] = useState(0)
+
+
+    const router = useRouter()
 
     useEffect(() => {
         const v = localStorage.getItem("vitorias");
@@ -33,8 +38,6 @@ export default function PPT() {
         console.log(escolhamaquina)
         setmaquina(escolhamaquina)
     }
-
-
 
     function jogar(escolhauser: any) {
         if (bloqueado) return
@@ -91,21 +94,19 @@ export default function PPT() {
 
 
         if (confirmed) {
-        localStorage.clear()
+            localStorage.clear()
             setvitorias(0)
             setderrotas(0)
             setempates(0)
         }
     }
 
-
-
-
     console.log(escuser)
 
     return (
         <div className="pptbody">
 
+            <img src="klipartz.com.png" alt="voltar" className='back' onClick={() => router.back()} />
             <div className="pptdi">
                 <h1 className="h1ppt">Pedra, Papel e Tesoura</h1>
                 <h2 style={{ color: cor }} >{resultado}</h2>
