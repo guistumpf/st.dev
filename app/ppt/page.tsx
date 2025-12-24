@@ -14,6 +14,17 @@ export default function PPT() {
     const [empates, setempates] = useState(0)
     const [derrotas, setderrotas] = useState(0)
 
+    useEffect(() => {
+        const v = localStorage.getItem("vitorias");
+        const d = localStorage.getItem("derrotas");
+        const e = localStorage.getItem("empates");
+
+        if (v) setvitorias(parseInt(v));
+        if (d) setderrotas(parseInt(d));
+        if (e) setempates(parseInt(e));
+    }, []);
+
+
     function random() {
         const maquina = ['✌️', '✊', '🤚']
         const escolha = Math.random() * 3
@@ -78,7 +89,9 @@ export default function PPT() {
     function reset() {
         const confirmed = confirm("Tem certeza que deseja resetar o placar?")
 
+
         if (confirmed) {
+        localStorage.clear()
             setvitorias(0)
             setderrotas(0)
             setempates(0)
