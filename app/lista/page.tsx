@@ -52,9 +52,6 @@ function ex({ index }: { index: number; }){
 settarefas(novas)
 }
 
-
-
-
   return (
     <>
 

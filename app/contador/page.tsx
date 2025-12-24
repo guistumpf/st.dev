@@ -26,11 +26,6 @@ if(salvo !== null ){
 setCarregado(true)
 }, [])
 
-
-
-
-
-
     function add() {
         setnumero(numero + 1)
     }
