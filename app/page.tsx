@@ -43,6 +43,7 @@ if(classmenu === "menu-lateral aberto"){
         <Link href={"/contador"} className="navtext">Contador</Link>
        <Link href={"/conversor"} className="navtext">Conversor</Link>
 <Link href={"/ppt"} className="navtext">PPT</Link>
+      <Link href={"/dado"} className="navtext">Role um dado (WIP)</Link>
         <h1 className="navtext"></h1>
         <h1 className="contato">Redes Sociais</h1>
        <div className="box-icones">
