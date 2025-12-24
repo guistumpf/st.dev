@@ -65,7 +65,7 @@ if(classmenu === "menu-lateral aberto"){
         <h1 className="head">st.dev</h1>
       </section>
       <div className="hero">
-        <img src="/image1.png" alt="something" className="kanye" />
+        <img src="/ellie.gif" alt="something" className="kanye" />
         <div className="hero-text">
           <h1 className="subtitulo">Bem-Vindo!</h1>
           <p className="texto">Olá! Meu nome é João e eu venho estudando desenvolvimento de sistemas
