@@ -1,6 +1,5 @@
 .dadocorpo{
-
-  margin: 0;
+margin: 0;
     box-sizing: border-box;
    min-height: 100vh;
    width: 100vw;
@@ -8,7 +7,7 @@
     justify-content: center;
     place-items: center;
     color: rgb(255, 255, 255);
-    background-color: #ffffff;
+    background-color: #3a3838;
 }
 
 .dadodiv{
@@ -36,4 +35,29 @@ margin: 20px;
  .pdado{
     margin: 2px;
     font-size: 13px;
+ }
+
+ .dadobut:disabled{
+    background-color: grey;
+    cursor: default
+ }
+
+ .historico{
+       background-color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    color: black;
+ }
+
+ .uldado{
+    margin: 0px;
+    padding: 10px;
+list-style: none; 
+}
+
+ .h3dado{
+    margin-bottom: 0px;
  }
