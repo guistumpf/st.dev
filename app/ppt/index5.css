@@ -21,14 +21,69 @@
     font-size: 2rem;
 }
 
+button:hover{
+    background-color: #aaa7a7;
+}
 
-
-button {
-    padding: 10px;
+.pedra{
+      padding: 10px;
     margin-top: 14px;
     margin-bottom: 14px;
-    background-color: #9c7e7e;
     border: 2px #121212 solid;
     cursor: pointer;
     margin-left: 3px;
+    background-color: cornflowerblue;
+}
+
+.tesoura{
+    padding: 10px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    border: 2px #121212 solid;
+    cursor: pointer;
+    margin-left: 3px;
+    background-color: purple;
+}
+
+.papel{
+     padding: 10px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    border: 2px #121212 solid;
+    cursor: pointer;
+    margin-left: 3px;
+    background-color: #000000;
+}
+
+.h32{
+    font-size: 14px;
+}
+
+.placar{
+    background-color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.vit{
+    color: green;
+}
+
+.del{
+    color: red;
+}
+
+.resu{
+    font-size: 20px;
+    margin-bottom: 2px;
+}
+
+.reseta{
+    margin-top: 4px;
+    border: 1px solid black;
+    background-color: whitesmoke;
+    cursor: pointer;
 }
