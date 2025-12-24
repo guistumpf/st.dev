@@ -50,7 +50,9 @@ export default function PPT() {
         if (escuser === esmaquina) {
             setResultado("Empate")
             setcor("grey")
-            setempates(empates + 1)
+            const totalempates = empates + 1
+            setempates(totalempates)
+            localStorage.setItem("empates", totalempates.toString())
         } else if (
             (escuser === "✊" && esmaquina === "🤚") ||
             (escuser === "🤚" && esmaquina === "✌️") ||
@@ -58,12 +60,15 @@ export default function PPT() {
         ) {
             setResultado("A máquina venceu!")
             setcor("red")
-            setderrotas(derrotas + 1)
-
+            const totalderrotas = derrotas + 1
+            setderrotas(totalderrotas)
+            localStorage.setItem("derrotas", totalderrotas.toString())
         } else {
             setResultado("Você venceu!")
             setcor("green")
-            setvitorias(vitorias + 1)
+            const totalvitorias = vitorias + 1
+            setvitorias(totalvitorias)
+            localStorage.setItem("vitorias", totalvitorias.toString())
         }
         setdisplay("Você:" + escuser)
         setdisplaym("Máquina:" + esmaquina)
@@ -71,13 +76,13 @@ export default function PPT() {
 
 
     function reset() {
-      const confirmed = confirm("Tem certeza que deseja resetar o placar?")
-      
-      if(confirmed){
-        setvitorias(0)
-        setderrotas(0)
-        setempates(0)
-      }
+        const confirmed = confirm("Tem certeza que deseja resetar o placar?")
+
+        if (confirmed) {
+            setvitorias(0)
+            setderrotas(0)
+            setempates(0)
+        }
     }
 
 
@@ -105,7 +110,7 @@ export default function PPT() {
                 <p className="vit">Vitórias: {vitorias}</p>
                 <p className="del">Derrotas: {derrotas}</p>
                 <p className="draw">Empates: {empates}</p>
-<button className="reseta" onClick={reset}>Reset 🔃</button>
+                <button className="reseta" onClick={reset}>Reset 🔃</button>
             </div>
         </div>
 
