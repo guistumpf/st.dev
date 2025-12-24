@@ -1,0 +1,39 @@
+.dadocorpo{
+
+  margin: 0;
+    box-sizing: border-box;
+   min-height: 100vh;
+   width: 100vw;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    color: rgb(255, 255, 255);
+    background-color: #ffffff;
+}
+
+.dadodiv{
+    background-color: #121212;
+    padding: 30px;
+    border-radius: 15px;
+text-align: center;
+ }
+
+ .dadobut{
+padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+ }
+
+ .dadosra{
+font-size: 100px;
+margin: 20px;
+ }
+
+ .pdado{
+    margin: 2px;
+    font-size: 13px;
+ }
