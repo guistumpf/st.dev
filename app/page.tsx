@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link";
-import { use, useState } from "react";
+import { useState } from "react";
 import "./index2.css"
 import "./responsivo.css"
 
