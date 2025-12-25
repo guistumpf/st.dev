@@ -1,4 +1,5 @@
 @media (max-width: 1600px) {
+
   /* --- 1. Cabeçalho --- */
   .head {
     font-size: 35px;
@@ -14,7 +15,8 @@
     width: 100%;
     padding: 20px;
     margin-top: 20px;
-    padding-bottom: 120px; /* Espaço extra para não cortar no fim */
+    padding-bottom: 120px;
+    /* Espaço extra para não cortar no fim */
   }
 
   /* --- 3. A Imagem (Kanye) --- */
@@ -37,14 +39,15 @@
     padding-left: 0;
   }
 
-  .texto, .texto2 {
+  .texto,
+  .texto2 {
     font-size: 16px;
     width: 100%;
     max-width: 100%;
     margin: 15px 0;
     padding: 0 10px;
   }
-  
+
   .texto3 {
     text-align: center;
     margin-bottom: 20px;
@@ -54,47 +57,67 @@
   .menu-lateral {
     width: 85%;
     /* Correção: Esconde 100% da largura, não importa o tamanho */
-    left: -100%; 
+    left: -100%;
   }
-  
+
   /* Mantém aberto quando tiver a classe */
   .menu-lateral.aberto {
     left: 0;
   }
 
-/* --- 6. Ícones e Rodapé (ALINHAMENTO PERFEITO) --- */
-  
+  /* --- 6. Ícones e Rodapé (ALINHAMENTO PERFEITO) --- */
+
   /* Posiciona o título "Redes Sociais" */
   .contato {
     font-size: 24px;
     top: auto;
-    bottom: 90px; /* Um pouco acima dos ícones */
-    left: 0; 
+    bottom: 90px;
+    /* Um pouco acima dos ícones */
+    left: 0;
     width: 100%;
-    text-align: center; /* Centraliza o texto */
+    text-align: center;
+    /* Centraliza o texto */
   }
 
   /* A nova caixa que criamos */
   .box-icones {
     position: absolute;
     bottom: 30px;
-    width: 100%; /* Ocupa toda a largura do menu */
-    display: flex; /* Ativa o modo flexível */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente (alinha o meio dos ícones) */
-    gap: 30px; /* Espaço igual entre cada ícone */
+    width: 100%;
+    /* Ocupa toda a largura do menu */
+    display: flex;
+    /* Ativa o modo flexível */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente (alinha o meio dos ícones) */
+    gap: 30px;
+    /* Espaço igual entre cada ícone */
     left: 0;
   }
 
   /* Resetamos as imagens para elas obedecerem a caixa flex */
-  .github, .zapfoda, .vercel  {
-    position: static !important; /* Desliga o position: absolute antigo */
+  .github,
+  .zapfoda,
+  .vercel {
+    position: static !important;
+    /* Desliga o position: absolute antigo */
     margin: 0 !important;
-    inset: auto !important; /* Remove top/left/bottom antigos */
+    inset: auto !important;
+    /* Remove top/left/bottom antigos */
   }
 
   /* Ajuste fino dos tamanhos para ficarem visivelmente parecidos */
-  .github { width: 40px; }
-  .zapfoda { width: 55px; } /* O zap costuma ser maior no arquivo original */
-  .vercel { width: 35px; }
+  .github {
+    width: 40px;
+  }
+
+  .zapfoda {
+    width: 55px;
+  }
+
+  /* O zap costuma ser maior no arquivo original */
+  .vercel {
+    width: 35px;
+  }
 }

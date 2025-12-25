@@ -20,7 +20,7 @@ export default function oi() {
     setPrimeiroCarregamento(true)
   }, [])
 
-  
+
   useEffect(() => {
     if (primeiroCarregamento) {
       localStorage.setItem('tarefas', JSON.stringify(tarefas))
@@ -46,11 +46,11 @@ export default function oi() {
     }
   }
 
-function ex({ index }: { index: number; }){
- const novas = tarefas.filter((_, i)=> i !== index)
+  function ex({ index }: { index: number; }) {
+    const novas = tarefas.filter((_, i) => i !== index)
 
-settarefas(novas)
-}
+    settarefas(novas)
+  }
 
   return (
     <>
@@ -58,8 +58,8 @@ settarefas(novas)
 
       <div className='corpo'>
 
-          
-         <img src="klipartz.com.png" alt="voltar" className='back' onClick={() => router.back()}/> 
+
+        <img src="klipartz.com.png" alt="voltar" className='back' onClick={() => router.back()} />
         <section className='Container'>
           <h1>Lista De Tarefas</h1>
           <input value={input} onChange={(e) => {
@@ -71,13 +71,13 @@ settarefas(novas)
             {tarefas.map((tarefas: any, index) => (
               <li key={tarefas}>
                 {tarefas}
-              <button className='btnex' onClick={() => ex({ index })} title='Excluir tarefa'>❌</button>
+                <button className='btnex' onClick={() => ex({ index })} title='Excluir tarefa'>❌</button>
               </li>
             ))}
-          </ul> 
-            {tarefas.length > 1 && (
-              <button onClick={excluir} className='del' title='Apagar Lista'>Limpar 🗑️</button>
-            )}
+          </ul>
+          {tarefas.length > 1 && (
+            <button onClick={excluir} className='del' title='Apagar Lista'>Limpar 🗑️</button>
+          )}
         </section>
       </div>
     </>

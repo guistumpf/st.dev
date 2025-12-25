@@ -1,8 +1,8 @@
-.pptbody{
-     margin: 0;
+.pptbody {
+    margin: 0;
     box-sizing: border-box;
-   min-height: 100vh;
-   width: 100vw;
+    min-height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     place-items: center;
@@ -10,23 +10,23 @@
     background-color: #000000;
 }
 
-.pptdi{
+.pptdi {
     background-color: white;
     text-align: center;
     padding: 20px;
     border-radius: 10px;
 }
 
-.h1ppt{
+.h1ppt {
     font-size: 2rem;
 }
 
-button:hover{
+button:hover {
     background-color: #aaa7a7;
 }
 
-.pedra{
-      padding: 10px;
+.pedra {
+    padding: 10px;
     margin-top: 14px;
     margin-bottom: 14px;
     border: 2px #121212 solid;
@@ -35,7 +35,7 @@ button:hover{
     background-color: cornflowerblue;
 }
 
-.tesoura{
+.tesoura {
     padding: 10px;
     margin-top: 14px;
     margin-bottom: 14px;
@@ -45,8 +45,8 @@ button:hover{
     background-color: purple;
 }
 
-.papel{
-     padding: 10px;
+.papel {
+    padding: 10px;
     margin-top: 14px;
     margin-bottom: 14px;
     border: 2px #121212 solid;
@@ -55,11 +55,11 @@ button:hover{
     background-color: #000000;
 }
 
-.h32{
+.h32 {
     font-size: 14px;
 }
 
-.placar{
+.placar {
     background-color: white;
     position: absolute;
     top: 20px;
@@ -68,31 +68,31 @@ button:hover{
     border-radius: 4px;
 }
 
-.vit{
+.vit {
     color: green;
 }
 
-.del{
+.del {
     color: red;
 }
 
-.resu{
+.resu {
     font-size: 20px;
     margin-bottom: 2px;
 }
 
-.reseta{
+.reseta {
     margin-top: 4px;
     border: 1px solid black;
     background-color: whitesmoke;
     cursor: pointer;
 }
 
-.back{
+.back {
     position: absolute;
     left: 10px;
     top: 10px;
- width: 18px;
- cursor: pointer;
- 
+    width: 18px;
+    cursor: pointer;
+
 }

@@ -11,7 +11,7 @@ export default function App() {
 
 
 
-let cor
+  let cor
   function mudarmenu() {
     setmenu(!menuaberto)
   }
@@ -22,16 +22,16 @@ let cor
     classmenu = "menu-lateral aberto"
   }
 
-if(classmenu === "menu-lateral aberto"){
-  cor = "pink"
-}
+  if (classmenu === "menu-lateral aberto") {
+    cor = "pink"
+  }
 
 
 
 
   return (
     <>
-<link rel="icon" href="/e1497514ab168e36120bb64668dbc7af.ico" sizes="any" />
+      <link rel="icon" href="/e1497514ab168e36120bb64668dbc7af.ico" sizes="any" />
       <button className={`hamburguer ${menuaberto && 'aberto'}`} onClick={mudarmenu}>
         <span className="linha"></span>
         <span className="linha"></span>
@@ -41,26 +41,26 @@ if(classmenu === "menu-lateral aberto"){
       <nav className={classmenu}>
         <Link href={"/lista"} className="navtext">Lista de Tarefas</Link>
         <Link href={"/contador"} className="navtext">Contador</Link>
-       <Link href={"/conversor"} className="navtext">Conversor</Link>
-<Link href={"/ppt"} className="navtext">PPT</Link>
-      <Link href={"/dado"} className="navtext">Role um dado</Link>
+        <Link href={"/conversor"} className="navtext">Conversor</Link>
+        <Link href={"/ppt"} className="navtext">PPT</Link>
+        <Link href={"/dado"} className="navtext">Role um dado</Link>
         <h1 className="navtext"></h1>
         <h1 className="contato">Redes Sociais</h1>
-       <div className="box-icones">
+        <div className="box-icones">
 
-        <a href="https://github.com/guistumpf">
-          <h1 className="navigit"><img src="pngegg(1).png" alt="github" className="github" /></h1>
-      
-      </a>
-      <a href="https://wa.me/qr/BCLRCFVD5KQNH1">
-          <h1 className="zap"><img src="—Pngtree—white whatsapp icon png vector_3562063.png" alt="" className="zapfoda" /></h1>
-      </a>
-      <a href="https://vercel.com/guistumpf">
-        <h1 className="vercelnav"><img src="Vercel_Symbol_1.png" alt="vercel" className="vercel"/></h1>
-      </a>
-       </div>
-    </nav>
-         
+          <a href="https://github.com/guistumpf">
+            <h1 className="navigit"><img src="pngegg(1).png" alt="github" className="github" /></h1>
+
+          </a>
+          <a href="https://wa.me/qr/BCLRCFVD5KQNH1">
+            <h1 className="zap"><img src="—Pngtree—white whatsapp icon png vector_3562063.png" alt="" className="zapfoda" /></h1>
+          </a>
+          <a href="https://vercel.com/guistumpf">
+            <h1 className="vercelnav"><img src="Vercel_Symbol_1.png" alt="vercel" className="vercel" /></h1>
+          </a>
+        </div>
+      </nav>
+
 
       <section>
         <h1 className="head">st.dev</h1>
@@ -81,16 +81,16 @@ if(classmenu === "menu-lateral aberto"){
           <span></span>
           <p className="texto2">
             Clique na barrinha no canto superior esquerdo da página e teste meus projetos!
-        
-    </p>
-    <p className="texto3">
-      *Todos os projetos (e esse site) são um WIP
-    </p>
-    <p className="sopc" >*Se o site ficar desalinhado tenta colocar 75% na lupa do pc</p>
+
+          </p>
+          <p className="texto3">
+            *Todos os projetos (e esse site) são um WIP
+          </p>
+          <p className="sopc" >*Se o site ficar desalinhado tenta colocar 75% na lupa do pc</p>
         </div>
       </div>
-      
-    </> 
+
+    </>
   )
- 
+
 }

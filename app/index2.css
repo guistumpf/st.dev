@@ -98,10 +98,11 @@ section {
   padding: 2px;
 }
 
-.hamburguer:hover{
+.hamburguer:hover {
   background-color: #ffffff;
-  }
-.hamburguer.aberto{
+}
+
+.hamburguer.aberto {
   background-color: #121212;
 }
 
@@ -194,7 +195,7 @@ section {
   left: 112px;
 }
 
-.sopc{
+.sopc {
   display: none;
   margin-top: 10px;
   margin: 6px 0 0 10px;
@@ -202,7 +203,7 @@ section {
   color: white;
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
   .sopc {
     display: block;
   }

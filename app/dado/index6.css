@@ -1,8 +1,8 @@
-.dadocorpo{
-margin: 0;
+.dadocorpo {
+    margin: 0;
     box-sizing: border-box;
-   min-height: 100vh;
-   width: 100vw;
+    min-height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     place-items: center;
@@ -10,83 +10,83 @@ margin: 0;
     background-color: #3a3838;
 }
 
-.dadodiv{
+.dadodiv {
     background-color: #121212;
     padding: 30px;
     border-radius: 15px;
-text-align: center;
-box-shadow: 0 4px 10px  #000000;
- }
+    text-align: center;
+    box-shadow: 0 4px 10px #000000;
+}
 
- .dadobut{
-padding: 10px 20px;
+.dadobut {
+    padding: 10px 20px;
     font-size: 18px;
     background-color: #4caf50;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
- }
+}
 
-.dadobut:hover{
+.dadobut:hover {
     background-color: rgb(255, 255, 255);
     color: black;
 }
 
 
- .dadosra{
-font-size: 100px;
-margin: 20px;
- }
+.dadosra {
+    font-size: 100px;
+    margin: 20px;
+}
 
- .pdado{
+.pdado {
     margin: 2px;
     font-size: 13px;
- }
+}
 
- .dadobut:disabled{
+.dadobut:disabled {
     background-color: grey;
     cursor: default
- }
+}
 
- .historico{
-       background-color: white;
+.historico {
+    background-color: white;
     position: absolute;
     top: 20px;
     right: 20px;
     padding: 10px;
     border-radius: 4px;
     color: black;
- }
-
- .uldado{
-    margin: 0px;
-    padding: 10px;
-list-style: none; 
-color: black;
 }
 
-.lidado{
+.uldado {
+    margin: 0px;
+    padding: 10px;
+    list-style: none;
+    color: black;
+}
+
+.lidado {
     color: black;
     list-style: none;
 }
 
- .h3dado{
+.h3dado {
     margin-bottom: 0px;
- }
+}
 
- .resetdado{
-     margin-top: 4px;
+.resetdado {
+    margin-top: 4px;
     border: 1px solid black;
     background-color: whitesmoke;
     cursor: pointer;
- }
+}
 
- .back{
+.back {
     position: absolute;
     left: 10px;
     top: 10px;
- width: 18px;
- cursor: pointer;
- 
+    width: 18px;
+    cursor: pointer;
+
 }

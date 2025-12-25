@@ -11,7 +11,7 @@ export default function Dados() {
     const [historico, setHistorico] = useState<number[]>([])
     const [carregado, setCarregado] = useState(false)
     const dados = ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"]
-const router = useRouter()
+    const router = useRouter()
 
 
     useEffect(() => {
@@ -66,7 +66,7 @@ const router = useRouter()
     return (<>
         <div className="dadocorpo">
 
-<img src="klipartz.com.png" alt="voltar" className='back' onClick={() => router.back()}/> 
+            <img src="klipartz.com.png" alt="voltar" className='back' onClick={() => router.back()} />
             <div className="dadodiv">
                 <h1 className="dadotitulo" >Jogue o Dado!</h1>
                 <h1 className="dadosra">{result}</h1>
