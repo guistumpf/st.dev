@@ -8,7 +8,7 @@ export default function Dados() {
     const [result, setresult] = useState("🎲")
     const [text, settext] = useState("Clique no botão para jogar!")
     const [bloqueado, setblock] = useState(false)
-    const [historico, setHistorico] = useState<number[]>([])
+    const [historico, setHistorico] = useState<any>("Nenhuma jogada feita")
     const [carregado, setCarregado] = useState(false)
     const dados = ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"]
     const router = useRouter()
@@ -39,7 +39,7 @@ export default function Dados() {
         const resultado = dados[randoma]
         const dadoreal = randoma + 1
 
-        setHistorico(prev => [...prev, dadoreal])
+        setHistorico(dadoreal)
 
         settext("Você tirou " + dadoreal + "!")
         setresult(resultado)
@@ -54,11 +54,11 @@ export default function Dados() {
     }
 
     function limpa() {
-        const confirmed = confirm("Tem certeza que deseja excluir o histórico?")
+        const confirmed = confirm("Tem certeza que deseja apagar o último número?")
 
         if (confirmed) {
             localStorage.removeItem("historico-dado")
-            setHistorico([])
+            setHistorico("Nenhuma jogada feita")
         }
     }
 
@@ -74,20 +74,9 @@ export default function Dados() {
                 <p className="pdado">{text}</p>
             </div>
             <div className="historico">
-                <h3 className="h3dado">Histórico:</h3>
-
-                {historico.length === 0 ? (
-                    <p>Nenhuma jogada ainda</p>
-                ) : (
-                    <ul className="uldado">
-                        {historico.map((item, index) => (
-                            <li key={index} className="lidado">
-                                Jogada {index + 1}: {item}
-                            </li>
-                        ))}
-                        <button className="resetdado" onClick={limpa}>Reset 🔃</button>
-                    </ul>
-                )}
+                <h3 className="h3dado">Último Número</h3>
+<p className="lastnumber">{historico}</p>
+<button onClick={limpa}>Apagar ❌</button>
             </div>
 
 

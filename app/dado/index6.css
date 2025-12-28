@@ -59,27 +59,13 @@
     color: black;
 }
 
-.uldado {
-    margin: 0px;
-    padding: 10px;
-    list-style: none;
-    color: black;
+.lastnumber{
+    font-size: 23px;
 }
 
-.lidado {
-    color: black;
-    list-style: none;
-}
-
-.h3dado {
-    margin-bottom: 0px;
-}
-
-.resetdado {
-    margin-top: 4px;
-    border: 1px solid black;
-    background-color: whitesmoke;
-    cursor: pointer;
+.h3dado{
+font-size: 20px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .back {
