@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import "./index2.css"
 import "./responsivo.css"
+import Snowfall from "react-snowfall"
 
 export default function App() {
 
@@ -31,6 +32,7 @@ export default function App() {
 
   return (
     <>
+    <Snowfall color="#FFFF" />
       <link rel="icon" href="/e1497514ab168e36120bb64668dbc7af.ico" sizes="any" />
       <button className={`hamburguer ${menuaberto && 'aberto'}`} onClick={mudarmenu}>
         <span className="linha"></span>
