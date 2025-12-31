@@ -55,9 +55,9 @@ setCarregado(true)
                 <section className="section">
                     <h1 className="titulo">Contador</h1>
                     <p style={{ color: cor }} className="numero">{numero}</p>
-                    <button onClick={add} className="porrinha">➕</button>
-                    <button onClick={reset} className="porrinha">🔃</button>
-                    <button onClick={minus} className="porrinha">➖</button>
+                    <button onClick={add} className="porrinha" title="Adicionar">➕</button>
+                    <button onClick={reset} className="porrinha" title="Resetar">🔃</button>
+                    <button onClick={minus} className="porrinha" title="Diminuir">➖</button>
                 </section>
    <img src="klipartz.com.png" alt="voltar" className='back1' onClick={() => router.back()}/>
             </div>

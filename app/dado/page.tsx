@@ -70,7 +70,7 @@ export default function Dados() {
             <div className="dadodiv">
                 <h1 className="dadotitulo" >Jogue o Dado!</h1>
                 <h1 className="dadosra">{result}</h1>
-                <button disabled={bloqueado} onClick={random} className="dadobut">Jogar o Dado</button>
+                <button disabled={bloqueado} onClick={random} className="dadobut" title="Jogar!">Jogar o Dado</button>
                 <p className="pdado">{text}</p>
             </div>
             <div className="historico">

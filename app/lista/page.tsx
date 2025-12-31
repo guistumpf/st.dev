@@ -66,7 +66,7 @@ export default function oi() {
             setinput(e.target.value)
             console.log(e.target.value)
           }} placeholder='Digite Uma Tarefa!'></input>
-          <button onClick={add} className='add'>Add</button>
+          <button onClick={add} className='add' title='Adicionar tarefa'>Add</button>
           <ul>
             {tarefas.map((tarefas: any, index) => (
               <li key={tarefas}>
