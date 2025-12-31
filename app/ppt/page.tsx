@@ -15,10 +15,10 @@ export default function PPT() {
     const [vitorias, setvitorias] = useState(0)
     const [empates, setempates] = useState(0)
     const [derrotas, setderrotas] = useState(0)
-
-
+    
+    
     const router = useRouter()
-
+    
     useEffect(() => {
         const v = localStorage.getItem("vitorias");
         const d = localStorage.getItem("derrotas");
@@ -28,8 +28,8 @@ export default function PPT() {
         if (d) setderrotas(parseInt(d));
         if (e) setempates(parseInt(e));
     }, []);
-
-
+    
+    
     function random() {
         const maquina = ['✌️', '✊', '🤚']
         const escolha = Math.random() * 3
@@ -38,34 +38,18 @@ export default function PPT() {
         console.log(escolhamaquina)
         setmaquina(escolhamaquina)
     }
-
+    
     function jogar(escolhauser: any) {
         if (bloqueado) return
-        setblock(true)
-
+        setblock(true) 
         setuser(escolhauser)
         random()
-
-        //aparentemente tem algum bug acontecendo nesse setTimeout
-        setTimeout(() => {
-            setblock(false)
-            setdisplay("")
-            setdisplaym("")
-            setcor("")
-            setResultado("Faça sua jogada!")
-
-        }, 2000)
-
-
-
-        console.log(setTimeout)
-
     }
-
+    
     useEffect(() => {
 
         if (!escuser || !esmaquina) return
-
+        
         if (escuser === esmaquina) {
             setResultado("Empate")
             setcor("grey")
@@ -89,15 +73,30 @@ export default function PPT() {
             setvitorias(totalvitorias)
             localStorage.setItem("vitorias", totalvitorias.toString())
         }
+        
         setdisplay("Você:" + escuser)
         setdisplaym("Máquina:" + esmaquina)
+        
+         const timer = setTimeout(() => {
+        setblock(false)
+            setdisplay("")
+            setdisplaym("")
+            setcor("")
+         setuser("")
+         setmaquina("")
+            setResultado("Faça sua jogada!")
+    
+        }, 2000)
+
+return () => clearTimeout(timer) 
+
     }, [escuser, esmaquina])
-
-
+    
+    
     function reset() {
         const confirmed = confirm("Tem certeza que deseja resetar o placar?")
 
-
+        
         if (confirmed) {
             localStorage.removeItem("vitorias")
             localStorage.removeItem("derrotas")
