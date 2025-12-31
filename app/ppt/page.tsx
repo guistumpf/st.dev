@@ -46,6 +46,7 @@ export default function PPT() {
         setuser(escolhauser)
         random()
 
+        //aparentemente tem algum bug acontecendo nesse setTimeout
         setTimeout(() => {
             setblock(false)
             setdisplay("")
@@ -53,7 +54,11 @@ export default function PPT() {
             setcor("")
             setResultado("Faça sua jogada!")
 
-        }, 1350)
+        }, 2000)
+
+
+
+        console.log(setTimeout)
 
     }
 
