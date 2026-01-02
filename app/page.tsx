@@ -90,6 +90,7 @@ export default function App() {
         </div>
       </div>
 
+      <a href="https://github.com/guistumpf/st.dev" className='fonte'>Código Fonte</a>
     </>
   )
 

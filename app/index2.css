@@ -208,3 +208,11 @@ section {
     display: block;
   }
 }
+
+.fonte{
+  font-size: 17px;
+  position: absolute;
+  bottom: 4px;
+  left: 8px;
+  color: white;
+}

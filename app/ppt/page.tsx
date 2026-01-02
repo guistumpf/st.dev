@@ -11,7 +11,7 @@ export default function PPT() {
     const [cor, setcor] = useState("")
     const [jguser, setdisplay] = useState("")
     const [jgma, setdisplaym] = useState("")
-    const [bloqueado, setblock] = useState(false)
+    const [bloqueado, setblock] = useState<boolean>(false)
     const [vitorias, setvitorias] = useState(0)
     const [empates, setempates] = useState(0)
     const [derrotas, setderrotas] = useState(0)
