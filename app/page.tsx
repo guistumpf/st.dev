@@ -73,7 +73,7 @@ export default function App() {
             a algum tempo e recentemente eu tive a ideia de criar esse site para armazenar meus projetos e ideias.
 
           </p>
-          <p className="texto">
+          <p className="textosecundario">
             Sinta-se livre para testar e acompanhar minha jornada conforme meus conhecimentos vão se expandindo na área!
           </p>
           <span></span>

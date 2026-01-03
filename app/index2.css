@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #000000;
+  background-color: #0d0f14;
   min-height: 100vh;
 
 }
@@ -12,12 +12,12 @@ body {
 .head {
   text-align: center;
   font-size: 55px;
-
+color: white;
+  background-color: #0F172A;
 }
 
 section {
   background-color: #ffffff;
-  color: #000000;
   font-family: serif;
 
 }
@@ -30,12 +30,13 @@ section {
   display: flex;
   align-items: flex-start;
   gap: 20px;
-}
+} 
 
 .hero-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: #E5E7EB;
 }
 
 .subtitulo {
@@ -43,14 +44,24 @@ section {
   font-size: 55px;
   font-family: serif;
   margin: 0;
-  color: white;
+  color: #ffffff;
 }
 
 .texto {
   margin: 6px 0 0 10px;
   font-size: 18px;
   line-height: 1.6;
-  color: #ffffff;
+  color: #D1D5DB;
+  max-width: 600px;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.textosecundario {
+  margin: 6px 0 0 10px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #6B7280;
   max-width: 600px;
   overflow-wrap: break-word;
   white-space: normal;
@@ -74,7 +85,7 @@ section {
 }
 
 .hamburguer {
-  background: #ffffff;
+  background: transparent;
   border: none;
   cursor: pointer;
   padding: 10px;
@@ -88,22 +99,22 @@ section {
   padding-top: 6px;
 }
 
+
 .linha {
   display: block;
   width: 30px;
   height: 4px;
-  background: #555353;
+  background: #dadee6;
   border-radius: 2px;
   transition: 0.4s;
   padding: 2px;
 }
 
-.hamburguer:hover {
-  background-color: #ffffff;
-}
 
-.hamburguer.aberto {
-  background-color: #121212;
+.hamburguer:hover{
+  .linha{
+    background-color: #22C55E;
+  }
 }
 
 
@@ -113,7 +124,7 @@ section {
   left: -250px;
   width: 250px;
   height: 100vh;
-  background-color: #121212;
+  background-color: #111827;
   padding-top: 80px;
   transition: 0.3s;
   display: flex;
@@ -131,7 +142,11 @@ section {
   margin: 7px;
   text-decoration: none;
   color: inherit;
-  color: white;
+  color: #E5E7EB;
+}
+
+.navtext:hover{
+  color: #22C55E;
 }
 
 .navigit {
@@ -147,6 +162,11 @@ section {
   width: 35px;
   top: 913px;
   left: 15px;
+  filter: brightness(0) saturate(100%) invert(70%);
+}
+.github:hover{
+  filter: brightness(0) saturate(100%) invert(57%) sepia(78%) saturate(433%) hue-rotate(86deg) brightness(96%) contrast(95%);
+
 }
 
 .contato {
@@ -177,6 +197,10 @@ section {
   width: 60px;
   top: 902px;
   left: 52px;
+filter: brightness(0) saturate(100%) invert(70%);
+}
+.zapfoda:hover{
+  filter: brightness(0) saturate(100%) invert(57%) sepia(78%) saturate(433%) hue-rotate(86deg) brightness(96%) contrast(95%);
 
 }
 
@@ -192,8 +216,14 @@ section {
   position: absolute;
   width: 30px;
   top: 918px;
+filter: brightness(0) saturate(100%) invert(70%);
   left: 112px;
+} 
+.vercel:hover{
+  filter: brightness(0) saturate(100%) invert(57%) sepia(78%) saturate(433%) hue-rotate(86deg) brightness(96%) contrast(95%);
+
 }
+
 
 .sopc {
   display: none;
