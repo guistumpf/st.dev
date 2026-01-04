@@ -239,27 +239,22 @@ filter: brightness(0) saturate(100%) invert(70%);
   }
 }
 
-.codigofonte{
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 15px;
-  text-decoration: none;
-  color: white;
-  font-size: 15px;
-white-space: nowrap;
-position: relative;
-top: 470px;
-right: 8px;
-font-weight: normal;
-line-height: 1;
-}
 .contato1{
-  font-weight: normal;
+  font-size: 30px;
+  margin: 7px;
+  text-decoration: none;
+  color: inherit;
+  color: white;
 }
 
 .iconfont{
- height: auto;
-  width: 23px;
+   position: absolute;
+  width: 40px;
+  top: 910px;
+filter: brightness(0) saturate(100%) invert(70%);
+  left: 156px;
+}
 
+.iconfont:hover{
+  filter: brightness(0) saturate(100%) invert(57%) sepia(78%) saturate(433%) hue-rotate(86deg) brightness(96%) contrast(95%);
 }

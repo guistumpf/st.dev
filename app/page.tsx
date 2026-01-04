@@ -45,11 +45,12 @@ export default function App() {
         <Link href={"/ppt"} className="navtext">PPT</Link>
         <Link href={"/dado"} className="navtext">Role um dado</Link>
         <h1 className="navtext"></h1>
-        <a href="" className="codigofonte">
-          <h1 className="contato1"><img src="/code-48.png" alt="something" className="iconfont"/> Código Fonte</h1>
-          </a>
         <h1 className="contato">Redes Sociais</h1>
         <div className="box-icones">
+     
+        <a href="https://github.com/guistumpf/st.dev" className="codigofonte">
+          <h1 className="contato1"><img src="/code-48.png" alt="something" className="iconfont"/></h1>
+          </a>
 
           <a href="https://github.com/guistumpf">
             <h1 className="navigit"><img src="pngegg(1).png" alt="github" className="github" /></h1>
@@ -92,8 +93,6 @@ export default function App() {
           <p className="sopc" >*Se o site ficar desalinhado tenta colocar 75% na lupa do pc</p>
         </div>
       </div>
-
-      <a href="https://github.com/guistumpf/st.dev" className='fonte'>Código Fonte</a>
     </>
   )
 
