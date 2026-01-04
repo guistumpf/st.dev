@@ -8,36 +8,52 @@
     display: flex;
     justify-content: center;
     place-items: center;
-    background-color: #121212;
+background-color: #121212;
 }
 
 .caixaconv{
-  padding: 20px;
-  background-color: whitesmoke;
-text-align: center;
-border-radius: 15px;
-
+background: #121c2d;
+  padding: 24px 32px;
+  border-radius: 12px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  border: 1px solid #1f2a44;
 }
 
 .conv{
-  font-size: 2rem;
+   margin-bottom: 8px;
+  font-size: 1.4rem;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  margin-bottom: 1px;
+  color: #e6e9f0;
 }
 
 .sub{
   margin-bottom: 10px;
   font-size: 1.1rem;
+  color: #a9b1c7;
 }
 
 .val{
-  border: 1px solid rgb(0, 0, 0);
-  font-size: 1.5rem;
+ width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #1f2a44;
+  background: #0b1320;
+  color: #e6e9f0;
+  outline: none;
   
+}
+.val:focus {
+  border-color: #4f8cff;
+  box-shadow: 0 0 0 2px rgba(79, 140, 255, 0.2);
 }
 
 .rel{
-  font-size: 30px;
+    margin-top: 16px;
+  font-weight: bold;
+  color: #6ea0ff;
 }
 
 .back{
