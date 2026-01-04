@@ -1,4 +1,4 @@
-@media (max-width: 1600px) {
+@media (max-width: 1800px) {
 
   /* --- 1. Cabeçalho --- */
   .head {
@@ -82,7 +82,7 @@
   /* A nova caixa que criamos */
   .box-icones {
     position: absolute;
-    bottom: 30px;
+    bottom: 20px;
     width: 100%;
     /* Ocupa toda a largura do menu */
     display: flex;
@@ -91,7 +91,7 @@
     /* Centraliza horizontalmente */
     align-items: center;
     /* Centraliza verticalmente (alinha o meio dos ícones) */
-    gap: 30px;
+    gap: 20px;
     /* Espaço igual entre cada ícone */
     left: 0;
   }
@@ -99,7 +99,8 @@
   /* Resetamos as imagens para elas obedecerem a caixa flex */
   .github,
   .zapfoda,
-  .vercel {
+  .vercel,
+.iconfont {
     position: static !important;
     /* Desliga o position: absolute antigo */
     margin: 0 !important;
@@ -117,7 +118,12 @@
   }
 
   /* O zap costuma ser maior no arquivo original */
-  .vercel {
+  .iconfont{
     width: 35px;
   }
+
+  .vercel {
+    width: 36px;
+  }
+  
 }

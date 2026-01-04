@@ -48,9 +48,6 @@ export default function App() {
         <h1 className="contato">Redes Sociais</h1>
         <div className="box-icones">
      
-        <a href="https://github.com/guistumpf/st.dev" className="codigofonte">
-          <h1 className="contato1"><img src="/code-48.png" alt="something" className="iconfont"/></h1>
-          </a>
 
           <a href="https://github.com/guistumpf">
             <h1 className="navigit"><img src="pngegg(1).png" alt="github" className="github" /></h1>
@@ -61,6 +58,11 @@ export default function App() {
           </a>
           <a href="https://vercel.com/guistumpf">
             <h1 className="vercelnav"><img src="Vercel_Symbol_1.png" alt="vercel" className="vercel" /></h1>
+          </a>
+        
+        <a href="https://github.com/guistumpf/st.dev" className="codigofonte">
+          <h1 className="contato1"><img src="/code-48.png" alt="something" className="iconfont"/></h1>
+        
           </a>
         </div>
       </nav>
