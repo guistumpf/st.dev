@@ -45,6 +45,9 @@ export default function App() {
         <Link href={"/ppt"} className="navtext">PPT</Link>
         <Link href={"/dado"} className="navtext">Role um dado</Link>
         <h1 className="navtext"></h1>
+        <a href="" className="codigofonte">
+          <h1 className="contato1"><img src="/code-48.png" alt="something" className="iconfont"/> Código Fonte</h1>
+          </a>
         <h1 className="contato">Redes Sociais</h1>
         <div className="box-icones">
 
