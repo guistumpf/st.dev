@@ -47,6 +47,7 @@ export default function App() {
         <h1 className="navtext"></h1>
         <h1 className="contato">Redes Sociais</h1>
         <div className="box-icones">
+     
 
           <a href="https://github.com/guistumpf">
             <h1 className="navigit"><img src="pngegg(1).png" alt="github" className="github" /></h1>
@@ -57,6 +58,11 @@ export default function App() {
           </a>
           <a href="https://vercel.com/guistumpf">
             <h1 className="vercelnav"><img src="Vercel_Symbol_1.png" alt="vercel" className="vercel" /></h1>
+          </a>
+        
+        <a href="https://github.com/guistumpf/st.dev" className="codigofonte">
+          <h1 className="contato1"><img src="/code-48.png" alt="something" className="iconfont"/></h1>
+        
           </a>
         </div>
       </nav>
@@ -73,7 +79,7 @@ export default function App() {
             a algum tempo e recentemente eu tive a ideia de criar esse site para armazenar meus projetos e ideias.
 
           </p>
-          <p className="texto">
+          <p className="textosecundario">
             Sinta-se livre para testar e acompanhar minha jornada conforme meus conhecimentos vão se expandindo na área!
           </p>
           <span></span>
@@ -86,11 +92,9 @@ export default function App() {
           <p className="texto3">
             *Todos os projetos (e esse site) são um WIP
           </p>
-          <p className="sopc" >*Se o site ficar desalinhado tenta colocar 75% na lupa do pc</p>
+         
         </div>
       </div>
-
-      <a href="https://github.com/guistumpf/st.dev" className='fonte'>Código Fonte</a>
     </>
   )
 

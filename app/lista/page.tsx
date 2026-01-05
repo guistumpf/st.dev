@@ -33,7 +33,13 @@ export default function oi() {
       return
     }
 
-    settarefas([...tarefas, input])
+const dados: any = {
+  text: input, 
+  id: Date.now()
+}
+
+
+    settarefas([...tarefas, dados])
     setinput("")
 
   }
@@ -69,14 +75,14 @@ export default function oi() {
           <button onClick={add} className='add' title='Adicionar tarefa'>Add</button>
           <ul>
             {tarefas.map((tarefas: any, index) => (
-              <li key={tarefas}>
-                {tarefas}
-                <button className='btnex' onClick={() => ex({ index })} title='Excluir tarefa'>❌</button>
+              <li key={tarefas.id}>
+                {tarefas.text}
+                <button className='btnex' onClick={() => ex({ index })} title='Excluir tarefa'>X</button>
               </li>
             ))}
           </ul>
           {tarefas.length > 1 && (
-            <button onClick={excluir} className='del' title='Apagar Lista'>Limpar 🗑️</button>
+            <button onClick={excluir} className='del' title='Apagar Lista'>🗑️</button>
           )}
         </section>
       </div>

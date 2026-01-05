@@ -8,16 +8,17 @@
     justify-content: center;
     place-items: center;
     color: white;
-    background-color: #000000;
+   background: radial-gradient(circle at top, #05080f, #020409)
 }
 
 .section{
-    padding: 15px;
-    text-align: center;
-    font-family: monospace;
-    border-radius: 12px;
-    background-color: #121212;
-    color: white;
+  background: #080d16;
+  border: 1px solid #141b2d;
+  border-radius: 14px;
+  padding: 22px 20px;
+  width: 180px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.85);
 
 }
 
@@ -27,10 +28,12 @@
 
 .porrinha{
     margin: 3px;
-    padding: 8px;
-    background-color: rgb(22, 30, 73);
-     border: 3px solid rgb(134, 131, 131);
+    padding: 6.7px;
+    background: #0c1220;
 transition: transform 0.4s;
+ border: 1px solid #141b2d;
+ font-size: 1.1rem;
+ transition: all 0.15s ease;
     }
 
 
@@ -38,7 +41,7 @@ transition: transform 0.4s;
     background-color: white;
     border-color: black;
     cursor: pointer;
-    transform: scale(1.1);
+   
 }
 
 .back1{
@@ -50,6 +53,6 @@ transition: transform 0.4s;
 }
 
 .titulo{
-    font-size: 35px;    
+    font-size: 30px;    
 }
 

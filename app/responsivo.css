@@ -1,4 +1,6 @@
-@media (max-width: 1600px) {
+@media (max-width: 728px ) 
+{
+  
 
   /* --- 1. Cabeçalho --- */
   .head {
@@ -8,14 +10,15 @@
 
   /* --- 2. O Layout Principal (Hero) --- */
   .hero {
-    position: relative;
-    inset: 0;
-    flex-direction: column;
+  margin: 60px auto 0 auto; /* Diminuí a margem do topo */
+    display: flex;
+    flex-direction: column; /* IMAGEM EM CIMA, TEXTO EMBAIXO */
     align-items: center;
-    width: 100%;
+    text-align: center;
+    gap: 20px;
     padding: 20px;
-    margin-top: 20px;
-    padding-bottom: 120px;
+
+
     /* Espaço extra para não cortar no fim */
   }
 
@@ -68,56 +71,7 @@
   /* --- 6. Ícones e Rodapé (ALINHAMENTO PERFEITO) --- */
 
   /* Posiciona o título "Redes Sociais" */
-  .contato {
-    font-size: 24px;
-    top: auto;
-    bottom: 90px;
-    /* Um pouco acima dos ícones */
-    left: 0;
-    width: 100%;
-    text-align: center;
-    /* Centraliza o texto */
-  }
+  
 
-  /* A nova caixa que criamos */
-  .box-icones {
-    position: absolute;
-    bottom: 30px;
-    width: 100%;
-    /* Ocupa toda a largura do menu */
-    display: flex;
-    /* Ativa o modo flexível */
-    justify-content: center;
-    /* Centraliza horizontalmente */
-    align-items: center;
-    /* Centraliza verticalmente (alinha o meio dos ícones) */
-    gap: 30px;
-    /* Espaço igual entre cada ícone */
-    left: 0;
-  }
-
-  /* Resetamos as imagens para elas obedecerem a caixa flex */
-  .github,
-  .zapfoda,
-  .vercel {
-    position: static !important;
-    /* Desliga o position: absolute antigo */
-    margin: 0 !important;
-    inset: auto !important;
-    /* Remove top/left/bottom antigos */
-  }
-
-  /* Ajuste fino dos tamanhos para ficarem visivelmente parecidos */
-  .github {
-    width: 40px;
-  }
-
-  .zapfoda {
-    width: 55px;
-  }
-
-  /* O zap costuma ser maior no arquivo original */
-  .vercel {
-    width: 35px;
-  }
+  
 }

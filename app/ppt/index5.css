@@ -6,66 +6,72 @@
     display: flex;
     justify-content: center;
     place-items: center;
-    color: rgb(0, 0, 0);
-    background-color: #000000;
+    color: rgb(255, 255, 255);
+   background: radial-gradient(circle at top, #1e180c, #0f0404)
 }
 
 .pptdi {
-    background-color: white;
+      background: #2c1515;
     text-align: center;
     padding: 20px;
     border-radius: 10px;
+     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.85);
+     color: white;
 }
 
 .h1ppt {
     font-size: 2rem;
 }
 
-button:hover {
-    background-color: #aaa7a7;
+.pedra:hover,
+.papel:hover,
+.tesoura:hover {
+    background-color:  #8b2222;
 }
 
 .pedra {
     padding: 10px;
     margin-top: 14px;
     margin-bottom: 14px;
-    border: 2px #121212 solid;
+    border: 2px #ffffff solid;
     cursor: pointer;
     margin-left: 3px;
-    background-color: cornflowerblue;
+       background: #200c0c;
 }
 
 .tesoura {
     padding: 10px;
     margin-top: 14px;
     margin-bottom: 14px;
-    border: 2px #121212 solid;
+    border: 2px #ffffff solid;
     cursor: pointer;
     margin-left: 3px;
-    background-color: purple;
+       background: #200c0c;
 }
 
 .papel {
     padding: 10px;
     margin-top: 14px;
     margin-bottom: 14px;
-    border: 2px #121212 solid;
+    border: 2px #ffffff solid;
     cursor: pointer;
     margin-left: 3px;
-    background-color: #000000;
+       background: #200c0c;
 }
 
 .h32 {
     font-size: 14px;
+    color: #FFFF;
 }
 
 .placar {
-    background-color: white;
+  
     position: absolute;
     top: 20px;
     right: 20px;
     padding: 10px;
     border-radius: 4px;
+    background-color: #201f11fe;
 }
 
 .vit {
@@ -79,6 +85,7 @@ button:hover {
 .resu {
     font-size: 20px;
     margin-bottom: 2px;
+    color: white;
 }
 
 .reseta {

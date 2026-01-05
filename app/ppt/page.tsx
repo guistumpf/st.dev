@@ -4,7 +4,7 @@ import "./index5.css"
 import { useRouter } from "next/navigation";
 
 export default function PPT() {
-    // Estados
+    //#region // Estados
     const [esmaquina, setmaquina] = useState("")
     const [escuser, setuser] = useState("")
     const [resultado, setResultado] = useState("Faça sua jogada!")
@@ -15,7 +15,7 @@ export default function PPT() {
     const [vitorias, setvitorias] = useState(0)
     const [empates, setempates] = useState(0)
     const [derrotas, setderrotas] = useState(0)
-    
+    //#endregion
     
     const router = useRouter()
     
