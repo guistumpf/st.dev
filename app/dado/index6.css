@@ -7,21 +7,21 @@
     justify-content: center;
     place-items: center;
     color: rgb(255, 255, 255);
-    background-color: #3a3838;
+    background: radial-gradient(circle at top, #111d39, #121212)
 }
 
 .dadodiv {
-    background-color: #121212;
+ background: #080d16;
     padding: 30px;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 4px 10px #000000;
+     box-shadow: 0 10px 25px rgba(4, 4, 4, 0.85);
 }
 
 .dadobut {
     padding: 10px 20px;
     font-size: 18px;
-    background-color: #4caf50;
+    background-color: #010a48;
     color: white;
     border: none;
     border-radius: 5px;
@@ -40,23 +40,24 @@
 }
 
 .pdado {
+    color: #2f5db4;
     margin: 2px;
     font-size: 13px;
 }
 
 .dadobut:disabled {
-    background-color: grey;
+    background-color: rgb(65, 62, 62);
     cursor: default
 }
 
 .historico {
-    background-color: white;
+    background-color:#0f1933;
     position: absolute;
     top: 20px;
     right: 20px;
     padding: 10px;
     border-radius: 4px;
-    color: black;
+    color: rgb(231, 228, 228);
 }
 
 .lastnumber{
