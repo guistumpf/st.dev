@@ -9,20 +9,7 @@ export default function oi() {
   const [tarefas, settarefas] = useState<string[]>([])
   const [input, setinput] = useState<string>("")
   const [primeiroCarregamento, setPrimeiroCarregamento] = useState(false)
-  const [concluido, setconclusao] = useState(false)
   const router = useRouter();
-
-let texto: any 
-
-  const mudanca = (event:any) => {
-    // Access the new checked status from event.target.checked
-    setconclusao(event.target.checked); 
-  };
-if(concluido === true){
-texto = {textDecoration: "line-through"}
-}
-
-
 
 
   useEffect(() => {
@@ -64,7 +51,7 @@ texto = {textDecoration: "line-through"}
 
     settarefas(novas)
   }
-console.log(concluido)
+
   return (
     <>
 
@@ -82,9 +69,8 @@ console.log(concluido)
           <button onClick={add} className='add' title='Adicionar tarefa'>Add</button>
           <ul>
             {tarefas.map((tarefas: any, index) => (
-              <li key={tarefas} style={texto}>
+              <li key={tarefas}>
                 {tarefas}
-                <input type="checkbox" name="marcar" id="a"  checked={concluido} onChange={mudanca}/>
                 <button className='btnex' onClick={() => ex({ index })} title='Excluir tarefa'>❌</button>
               </li>
             ))}
