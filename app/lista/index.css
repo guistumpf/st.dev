@@ -7,16 +7,23 @@
     display: flex;
     justify-content: center;
     place-items: start;
-    color: white;
-    background-color: #121212
+   
+      background: radial-gradient(circle at top, #14341d, #000);
+  color: #e5e7eb;
+  font-family: 'Inter', sans-serif;
 
 }
 
-.Container{
-    background-color: #121212;
-text-align: center;
-color: white;
+
+.Container {
+  background: #020617;
+  width: 400px;
+  margin: 80px auto;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.6);
 }
+
 
 input{
     font-size: 15px;
@@ -54,11 +61,22 @@ color: rgb(255, 255, 255)
 }
 
 .del{
-    border: 1px solid black;
-    background-color: rgb(112, 108, 108);
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    cursor: pointer;
+   background: transparent;
+  border: 1px solid #374151;
+  color: #9ca3af;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+.del:hover{
+     border-color: #ef4444;
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.08);
 }
 
 .add{
@@ -70,25 +88,20 @@ cursor: pointer;
 
 }
 
-
 .add:hover{
     background-color: white;
 }
 
-
-
 .btnex{
-    padding: 0px;
-    font-size: 13px;
-    margin-left: 10px;
-    border: 1px black solid;
-    background-color: rgb(71, 67, 67);
-cursor: pointer;
-transition: transform 0.4s;
+ background: transparent;
+  border: none;
+  color: #6b7280;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.2s, transform 0.2s;
 }
 
 .btnex:hover{
-    transform: scale(1.1);
-    background-color: #ffffff;
-    border-color: rgb(210, 101, 101);
+    color: #ef4444;
+  transform: scale(1.2);
 }
