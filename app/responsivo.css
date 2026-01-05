@@ -10,14 +10,13 @@
 
   /* --- 2. O Layout Principal (Hero) --- */
   .hero {
-    
-  position: relative;
-  max-width: 1200px;
-  margin: 80px auto 0 auto; /* centraliza real */
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  gap: 30px;
+  margin: 60px auto 0 auto; /* Diminuí a margem do topo */
+    display: flex;
+    flex-direction: column; /* IMAGEM EM CIMA, TEXTO EMBAIXO */
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
 
 
     /* Espaço extra para não cortar no fim */
