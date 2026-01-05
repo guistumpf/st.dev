@@ -6,30 +6,30 @@
 body {
   background-color: #0d0f14;
   min-height: 100dvh;
-
 }
 
+/* --- CABEÇALHO --- */
 .head {
   text-align: center;
   font-size: 55px;
-color: white;
+  color: white;
   background-color: #0F172A;
 }
 
 section {
   background-color: #ffffff;
   font-family: serif;
-
 }
 
+/* --- HERO (Kanye/Ellie) --- */
 .hero {
-  position: fixed;
-  padding: 10px;
-  bottom: 310px;
-  left: 400px;
+  position: relative;
+  max-width: 1100px;
+  margin: 120px auto 0;
+  padding: 20px;
   display: flex;
-  align-items: flex-start;
-  gap: 20px;
+  align-items: center;
+  gap: 30px;
 } 
 
 .hero-text {
@@ -78,12 +78,20 @@ section {
   margin-top: 30px;
 }
 
+.texto3 {
+  margin-top: 10px;
+  margin: 6px 0 0 10px;
+  font-size: 13px;
+  color: white;
+}
+
 
 .kanye {
   width: 300px;
   height: 350px;
 }
 
+/* --- MENU HAMBURGUER --- */
 .hamburguer {
   background: transparent;
   border: none;
@@ -99,7 +107,6 @@ section {
   padding-top: 6px;
 }
 
-
 .linha {
   display: block;
   width: 30px;
@@ -110,27 +117,27 @@ section {
   padding: 2px;
 }
 
-
-.hamburguer:hover{
-  .linha{
-    background-color: #22C55E;
-  }
+.hamburguer:hover .linha{
+  background-color: #22C55E;
 }
 
-
+/* --- MENU LATERAL (A Correção Real) --- */
 .menu-lateral {
   position: fixed;
   top: 0;
   left: -250px;
   width: 250px;
-  height: 100dvh;
+  height: 100dvh; /* Altura total da tela */
   background-color: #111827;
   padding-top: 80px;
+  padding-bottom: 20px;
   transition: 0.3s;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
   z-index: 999;
+  
+  /* FLEXBOX para alinhar tudo magicamente */
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
 }
 
 .menu-lateral.aberto {
@@ -139,122 +146,75 @@ section {
 
 .navtext {
   font-size: 30px;
-  margin: 7px;
+margin: 6px;
   text-decoration: none;
-  color: inherit;
+  margin-left: 0px;
   color: #E5E7EB;
+  display: block;
 }
 
 .navtext:hover{
   color: #22C55E;
 }
 
-.navigit {
-  font-size: 30px;
-  margin: 7px;
-  text-decoration: none;
-  color: inherit;
-  color: white;
-}
+/* --- RODAPÉ DO MENU (Redes Sociais) --- */
 
-.github {
-  position: absolute;
-  width: 35px;
-  top: 913px;
-  left: 15px;
-  filter: brightness(0) saturate(100%) invert(70%);
-}
-.github:hover{
-  filter: brightness(0) saturate(100%) invert(57%) sepia(78%) saturate(433%) hue-rotate(86deg) brightness(96%) contrast(95%);
-
-}
-
+/* Título "Redes Sociais" */
 .contato {
-  position: absolute;
-  top: 860px;
+  /* Isso joga o título e os ícones para o final da barra automaticamente */
+  margin-top: auto; 
+  margin-bottom: 15px;
+  margin-left: 20px;
   color: white;
-  left: 10px;
-  font-size: 34px;
+  font-size: 28px;
+  text-align: left;
 }
 
-.texto3 {
-  margin-top: 10px;
-  margin: 6px 0 0 10px;
-  font-size: 13px;
-  color: white;
+/* Container dos ícones */
+.box-icones {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;
+  gap: 15px; /* Espaço entre os ícones */
+  padding-bottom: 10px;
 }
 
-.zap {
-  font-size: 30px;
-  margin: 7px;
+/* Resetando os links e H1 dentro da box de ícones para não quebrar o layout */
+.box-icones a,
+.box-icones h1 {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  color: inherit;
-  color: white;
 }
 
+/* --- ÍCONES (Padronizados e sem position absolute) --- */
+.github,
+.zapfoda,
+.vercel,
+.iconfont {
+  position: static; /* Removemos o position absolute que estava quebrando */
+  width: 32px;
+  height: auto;
+  filter: brightness(0) saturate(100%) invert(70%);
+  transition: 0.2s;
+}
+
+/* Ajustes finos de tamanho para parecerem iguais */
 .zapfoda {
-  position: absolute;
-  width: 60px;
-  top: 902px;
-  left: 52px;
-filter: brightness(0) saturate(100%) invert(70%);
+  width: 50px; 
 }
-.zapfoda:hover{
+.iconfont {
+  width: 36px;
+}
+
+/* Efeito Hover Unificado */
+.github:hover,
+.zapfoda:hover,
+.vercel:hover,
+.iconfont:hover {
   filter: brightness(0) saturate(100%) invert(57%) sepia(78%) saturate(433%) hue-rotate(86deg) brightness(96%) contrast(95%);
-
-}
-
-.vercelnav {
-  font-size: 30px;
-  margin: 7px;
-  text-decoration: none;
-  color: inherit;
-  color: white;
-}
-
-.vercel {
-  position: absolute;
-  width: 30px;
-  top: 918px;
-filter: brightness(0) saturate(100%) invert(70%);
-  left: 112px;
-} 
-.vercel:hover{
-  filter: brightness(0) saturate(100%) invert(57%) sepia(78%) saturate(433%) hue-rotate(86deg) brightness(96%) contrast(95%);
-
-}
-
-
-.sopc {
-  display: none;
-  margin-top: 10px;
-  margin: 6px 0 0 10px;
-  font-size: 16px;
-  color: white;
-}
-
-@media (min-width: 768px) {
-  .sopc {
-    display: block;
-  }
-}
-
-.contato1{
-  font-size: 30px;
-  margin: 7px;
-  text-decoration: none;
-  color: inherit;
-  color: white;
-}
-
-.iconfont{
-   position: absolute;
-  width: 40px;
-  top: 910px;
-filter: brightness(0) saturate(100%) invert(70%);
-  left: 156px;
-}
-
-.iconfont:hover{
-  filter: brightness(0) saturate(100%) invert(57%) sepia(78%) saturate(433%) hue-rotate(86deg) brightness(96%) contrast(95%);
+  transform: scale(1.1);
 }
