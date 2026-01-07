@@ -8,7 +8,7 @@ body {
   min-height: 100dvh;
 }
 
-/* --- CABEÇALHO --- */
+
 .head {
   text-align: center;
   font-size: 55px;
@@ -21,7 +21,7 @@ section {
   font-family: serif;
 }
 
-/* --- HERO (Kanye/Ellie) --- */
+
 .hero {
   position: relative;
   max-width: 1100px;
@@ -91,7 +91,7 @@ section {
   height: 350px;
 }
 
-/* --- MENU HAMBURGUER --- */
+
 .hamburguer {
   background: transparent;
   border: none;
@@ -121,20 +121,20 @@ section {
   background-color: #22C55E;
 }
 
-/* --- MENU LATERAL (A Correção Real) --- */
+
 .menu-lateral {
   position: fixed;
   top: 0;
   left: -250px;
   width: 250px;
-  height: 100dvh; /* Altura total da tela */
+  height: 100dvh; 
   background-color: #111827;
   padding-top: 80px;
   padding-bottom: 20px;
   transition: 0.3s;
   z-index: 999;
   
-  /* FLEXBOX para alinhar tudo magicamente */
+ 
   display: flex;
   flex-direction: column; 
   align-items: flex-start;
@@ -157,11 +157,9 @@ margin: 6px;
   color: #22C55E;
 }
 
-/* --- RODAPÉ DO MENU (Redes Sociais) --- */
 
-/* Título "Redes Sociais" */
 .contato {
-  /* Isso joga o título e os ícones para o final da barra automaticamente */
+
   margin-top: auto; 
   margin-bottom: 15px;
   margin-left: 20px;
@@ -170,17 +168,17 @@ margin: 6px;
   text-align: left;
 }
 
-/* Container dos ícones */
+
 .box-icones {
   width: 100%;
   display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
+  justify-content: center; 
   align-items: center;
-  gap: 15px; /* Espaço entre os ícones */
+  gap: 15px; 
   padding-bottom: 10px;
 }
 
-/* Resetando os links e H1 dentro da box de ícones para não quebrar o layout */
+
 .box-icones a,
 .box-icones h1 {
   margin: 0;
@@ -190,19 +188,19 @@ margin: 6px;
   text-decoration: none;
 }
 
-/* --- ÍCONES (Padronizados e sem position absolute) --- */
+
 .github,
 .zapfoda,
 .vercel,
 .iconfont {
-  position: static; /* Removemos o position absolute que estava quebrando */
+  position: static; 
   width: 32px;
   height: auto;
   filter: brightness(0) saturate(100%) invert(70%);
   transition: 0.2s;
 }
 
-/* Ajustes finos de tamanho para parecerem iguais */
+
 .zapfoda {
   width: 50px; 
 }
@@ -210,7 +208,7 @@ margin: 6px;
   width: 36px;
 }
 
-/* Efeito Hover Unificado */
+
 .github:hover,
 .zapfoda:hover,
 .vercel:hover,
