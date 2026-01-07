@@ -4,11 +4,35 @@ import Link from "next/link";
 import { useState } from "react";
 import "./index2.css"
 import "./responsivo.css"
+import Image from "next/image"
 
 export default function App() {
 
   const [menuaberto, setmenu] = useState<any>(false)
+const [imagem, setimagem]  = useState<any>(0)
+const [claro, setclaro] = useState(false)
 
+
+
+
+let textos
+if (claro) {
+    textos = 'black';
+}
+
+
+
+
+
+const imagens = [
+  '/light-mode-svgrepo-com (3).png',
+  '/dark-mode-6682.png'
+]
+
+const proximaimagem = () => {
+  setimagem((prevIndex: any) => (prevIndex + 1 ) % imagens.length)
+claro1()
+}
 
 
   let cor
@@ -26,8 +50,12 @@ export default function App() {
     cor = "pink"
   }
 
+function claro1(){
+  setclaro(prevtrue => !prevtrue)
+}
 
 
+console.log(claro)
 
   return (
     <>
@@ -70,26 +98,33 @@ export default function App() {
 
       <section>
         <h1 className="head">st.dev</h1>
+    <Image  src={imagens[imagem]}
+    alt="pi"
+    width={45}
+    height={45} style={{cursor: "pointer"}}
+    onClick={proximaimagem}
+    className="tema"/>
+    
       </section>
       <div className="hero">
         <img src="/ellie.gif" alt="something" className="kanye" />
         <div className="hero-text">
-          <h1 className="subtitulo">Bem-Vindo!</h1>
-          <p className="texto">Olá! Meu nome é João e eu venho estudando desenvolvimento de sistemas
+          <h1 className="subtitulo" style={{color: textos}}>Bem-Vindo!</h1>
+          <p className="texto" style={{color: textos}}>Olá! Meu nome é João e eu venho estudando desenvolvimento de sistemas
             a algum tempo e recentemente eu tive a ideia de criar esse site para armazenar meus projetos e ideias.
 
           </p>
-          <p className="textosecundario">
+          <p className="textosecundario" style={{color: textos}}>
             Sinta-se livre para testar e acompanhar minha jornada conforme meus conhecimentos vão se expandindo na área!
           </p>
           <span></span>
           <span></span>
           <span></span>
-          <p className="texto2">
+          <p className="texto2" >
             Clique na barrinha no canto superior esquerdo da página e teste meus projetos!
 
           </p>
-          <p className="texto3">
+          <p className="texto3" style={{color: textos}}>
             *Todos os projetos (e esse site) são um WIP
           </p>
          
