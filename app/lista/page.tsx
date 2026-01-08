@@ -3,14 +3,33 @@
 import './index.css';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from "react"
-
+import Image from 'next/image';
+import "./clarolist.css"
 export default function oi() {
 
   const [tarefas, settarefas] = useState<string[]>([])
   const [input, setinput] = useState<string>("")
   const [primeiroCarregamento, setPrimeiroCarregamento] = useState(false)
   const router = useRouter();
+  const[claro, setclaro] = useState(false)
+const [carregado, setCarregado] = useState(false);
 
+
+useEffect(() => {
+  const salvo = localStorage.getItem("theme: lista");
+  if (salvo) {
+    setclaro(salvo === "light");
+  }
+  setCarregado(true);
+}, []);
+
+
+useEffect(() => {
+  if (!carregado) return;
+
+  document.body.classList.toggle("light", claro);
+  localStorage.setItem("theme: lista", claro ? "light" : "dark");
+}, [claro, carregado]);
 
   useEffect(() => {
     const dados = localStorage.getItem("tarefas")
@@ -58,12 +77,27 @@ const dados: any = {
     settarefas(novas)
   }
 
+  const imagens = [
+  '/light-mode-svgrepo-com (3).png',
+  '/dark-mode-6682.png'
+]
+
+
+const imagemAtual = claro ? imagens[1] : imagens[0]
+
   return (
     <>
 
 
-      <div className='corpo'>
-
+      <div className='corpo1'>
+<Image 
+src={imagemAtual}
+width={45}
+height={45}
+alt="a"
+onClick={() => setclaro(prev => !prev)}
+className='tema'
+/>
 
         <img src="klipartz.com.png" alt="voltar" className='back' onClick={() => router.back()} />
         <section className='Container'>
@@ -75,7 +109,7 @@ const dados: any = {
           <button onClick={add} className='add' title='Adicionar tarefa'>Add</button>
           <ul>
             {tarefas.map((tarefas: any, index) => (
-              <li key={tarefas.id}>
+              <li key={tarefas.id} className='li'>
                 {tarefas.text}
                 <button className='btnex' onClick={() => ex({ index })} title='Excluir tarefa'>X</button>
               </li>

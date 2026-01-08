@@ -1,5 +1,5 @@
 
-.corpo{
+.corpo1{
     margin: 0;
     box-sizing: border-box;
    min-height: 100vh;
@@ -7,8 +7,7 @@
     display: flex;
     justify-content: center;
     place-items: start;
-   
-      background: radial-gradient(circle at top, #14341d, #000);
+   background: radial-gradient(circle at top, #1c3417, #000);
   color: #e5e7eb;
   font-family: 'Inter', sans-serif;
 
@@ -16,7 +15,7 @@
 
 
 .Container {
-  background: #020617;
+  background: #08170a;
   width: 400px;
   margin: 80px auto;
   padding: 24px;
