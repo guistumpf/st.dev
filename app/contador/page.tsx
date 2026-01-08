@@ -3,49 +3,51 @@ import { useRouter } from "next/navigation"
 import "./index3.css"
 import { use, useEffect, useState } from "react"
 import Image from "next/image"
+import "./clarocont.css"
 
 export default function Contador() {
 
     const [numero, setnumero] = useState<number>(0)
-const router = useRouter();
-const [carregado, setCarregado] = useState(false);
-const [claro, setclaro] = useState(false);
-    const [imagem, setimagem]  = useState<any>(0)
-const [carregadot, setCarregadot] = useState(false);
-const STORAGE_KEY = "theme:contador";
-
-useEffect(() => {
-  const salvo = localStorage.getItem(STORAGE_KEY);
-  if (salvo) {
-    setclaro(salvo === "light");
-  }
-  setCarregadot(true);
-}, []);
+    const router = useRouter();
+    const [carregado, setCarregado] = useState(false);
+    const [claro, setclaro] = useState(false);
+    const [carregadot, setCarregadot] = useState(false);
+    const STORAGE_KEY = "theme:contador";
 
 
-useEffect(() => {
-  if (!carregadot) return;
+    useEffect(() => {
+        const salvo = localStorage.getItem(STORAGE_KEY);
+        if (salvo) {
+            setclaro(salvo === "light");
+        }
+        setCarregadot(true);
+    }, []);
 
-  document.body.classList.toggle("light", claro);
-  localStorage.setItem(STORAGE_KEY, claro ? "light" : "dark");
-}, [claro, carregadot]);
+
+    useEffect(() => {
+        if (!carregadot) return;
+
+        document.body.classList.toggle("light", claro);
+        localStorage.setItem(STORAGE_KEY, claro ? "light" : "dark");
+    }, [claro, carregadot]);
 
     let cor
-    
+
     useEffect(() => {
-       if(carregadot){
-           localStorage.setItem("numero", numero.toString())
+        if (carregado) {
+            localStorage.setItem("numero", numero.toString())
         }
-    }, 
-[numero, carregado])
-    
-useEffect(() =>{
-    const salvo = localStorage.getItem("numero")
-if(salvo !== null ){
-    setnumero(+salvo)
-}
-setCarregado(true)
-}, [])
+    },
+        [numero, carregado])
+
+    useEffect(() => {
+        const salvo = localStorage.getItem("numero")
+        if (salvo !== null) {
+            setnumero(+salvo)
+        }
+        setCarregado(true)
+    }, [])
+
 
     function add() {
         setnumero(numero + 1)
@@ -67,28 +69,22 @@ setCarregado(true)
 
 
     const imagens = [
-  '/light-mode-svgrepo-com (3).png',
-  '/dark-mode-6682.png'
-]
-const proximaimagem = () => {
-  setimagem((prevIndex: any) => (prevIndex + 1 ) % imagens.length)
-claro1()
-}
+        '/light-mode-svgrepo-com (3).png',
+        '/dark-mode-6682.png'
+    ]
 
-function claro1(){
-  setclaro(prevtrue => !prevtrue)
-}
+   const imagemAtual = claro ? imagens[1] : imagens[0];
 
     return (
         <>
 
             <div className="corpo2">
-   <Image  src={imagens[imagem]}
-    alt="pi"
-    width={45}
-    height={45} style={{cursor: "pointer"}}
-    onClick={proximaimagem}
-    className="tema"/>
+                <Image src={imagemAtual}
+                    alt="pi"
+                    width={45}
+                    height={45} style={{ cursor: "pointer" }}
+                    onClick={() => setclaro(prev => !prev)}
+                    className="tema" />
 
                 <section className="section">
                     <h1 className="titulo">Contador</h1>
@@ -97,7 +93,7 @@ function claro1(){
                     <button onClick={reset} className="porrinha" title="Resetar">🔃</button>
                     <button onClick={minus} className="porrinha" title="Diminuir">➖</button>
                 </section>
-   <img src="klipartz.com.png" alt="voltar" className='back1' onClick={() => router.back()}/>
+                <img src="klipartz.com.png" alt="voltar" className='back1' onClick={() => router.back()} />
             </div>
         </>
     )

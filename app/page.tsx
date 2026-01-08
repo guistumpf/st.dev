@@ -5,8 +5,6 @@ import { useState, useEffect } from "react";
 import "./index2.css"
 import "./responsivo.css"
 import Image from "next/image"
-import dynamic from "next/dynamic";
-import { text } from "stream/consumers";
 import "./claro.css"
 
 export default function App() {
@@ -29,7 +27,7 @@ useEffect(() => {
   if (!carregado) return;
 
   document.body.classList.toggle("light", claro);
-  localStorage.setItem("themecontador", claro ? "light" : "dark");
+  localStorage.setItem("theme", claro ? "light" : "dark");
 }, [claro, carregado]);
 
 

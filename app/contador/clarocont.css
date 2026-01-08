@@ -1,0 +1,34 @@
+
+.light .corpo2 {
+    background: radial-gradient(circle at top, #ffffff, #e6e6e6);
+    color: #05080f;
+}
+
+.light .section {
+    background: #f0f2f5; 
+    border: 1px solid #d1d5db; 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); 
+}
+
+
+.light .porrinha {
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    color: #05080f;
+}
+
+.light .porrinha:hover {
+    background-color: #0c1220; 
+    color: white;
+    border-color: #0c1220;
+    transform: scale(1.1);
+}
+
+/* Título */
+.light .titulo {
+    color: #080d16;
+}
+
+.light .back1{
+    filter: brightness(0);
+}
