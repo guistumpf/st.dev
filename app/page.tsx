@@ -1,14 +1,48 @@
 "use client"
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./index2.css"
 import "./responsivo.css"
+import Image from "next/image"
+import dynamic from "next/dynamic";
+import { text } from "stream/consumers";
+import "./claro.css"
 
 export default function App() {
 
   const [menuaberto, setmenu] = useState<any>(false)
+const [imagem, setimagem]  = useState<any>(0)
+const [claro, setclaro] = useState(false);
+const [carregado, setCarregado] = useState(false);
 
+
+useEffect(() => {
+  const salvo = localStorage.getItem("theme");
+  if (salvo) {
+    setclaro(salvo === "light");
+  }
+  setCarregado(true);
+}, []);
+
+
+useEffect(() => {
+  if (!carregado) return;
+
+  document.body.classList.toggle("light", claro);
+  localStorage.setItem("theme", claro ? "light" : "dark");
+}, [claro, carregado]);
+
+
+const imagens = [
+  '/light-mode-svgrepo-com (3).png',
+  '/dark-mode-6682.png'
+]
+
+const proximaimagem = () => {
+  setimagem((prevIndex: any) => (prevIndex + 1 ) % imagens.length)
+claro1()
+}
 
 
   let cor
@@ -26,8 +60,12 @@ export default function App() {
     cor = "pink"
   }
 
+function claro1(){
+  setclaro(prevtrue => !prevtrue)
+}
 
 
+console.log(claro)
 
   return (
     <>
@@ -70,6 +108,13 @@ export default function App() {
 
       <section>
         <h1 className="head">st.dev</h1>
+    <Image  src={imagens[imagem]}
+    alt="pi"
+    width={45}
+    height={45} style={{cursor: "pointer"}}
+    onClick={proximaimagem}
+    className="tema"/>
+    
       </section>
       <div className="hero">
         <img src="/ellie.gif" alt="something" className="kanye" />
@@ -85,7 +130,7 @@ export default function App() {
           <span></span>
           <span></span>
           <span></span>
-          <p className="texto2">
+          <p className="texto2" >
             Clique na barrinha no canto superior esquerdo da página e teste meus projetos!
 
           </p>
