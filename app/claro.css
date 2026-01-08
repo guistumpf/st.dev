@@ -44,9 +44,9 @@ body.light .contato{
 
 
 body.light .github:hover,
-.zapfoda:hover,
-.vercel:hover,
-.iconfont:hover {
+body.light .zapfoda:hover,
+body.light .vercel:hover,
+body.light .iconfont:hover {
   filter: brightness(0);
   transform: scale(1.1);
 }
