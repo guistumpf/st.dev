@@ -47,6 +47,13 @@ body.light .github:hover,
 body.light .zapfoda:hover,
 body.light .vercel:hover,
 body.light .iconfont:hover {
-  filter: brightness(0);
+  filter: brightness(30%);
   transform: scale(1.1);
+}
+
+body.light .github,
+body.light .vercel,
+body.light .iconfont, 
+body.light .zapfoda{
+    filter: brightness(0);
 }
