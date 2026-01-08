@@ -1,27 +1,37 @@
 "use client"
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./index2.css"
 import "./responsivo.css"
 import Image from "next/image"
+import dynamic from "next/dynamic";
+import { text } from "stream/consumers";
+import "./claro.css"
 
 export default function App() {
 
   const [menuaberto, setmenu] = useState<any>(false)
 const [imagem, setimagem]  = useState<any>(0)
-const [claro, setclaro] = useState(false)
+const [claro, setclaro] = useState(false);
+const [carregado, setCarregado] = useState(false);
 
 
+useEffect(() => {
+  const salvo = localStorage.getItem("theme");
+  if (salvo) {
+    setclaro(salvo === "light");
+  }
+  setCarregado(true);
+}, []);
 
 
-let textos
-if (claro) {
-    textos = 'black';
-}
+useEffect(() => {
+  if (!carregado) return;
 
-
-
+  document.body.classList.toggle("light", claro);
+  localStorage.setItem("theme", claro ? "light" : "dark");
+}, [claro, carregado]);
 
 
 const imagens = [
@@ -109,12 +119,12 @@ console.log(claro)
       <div className="hero">
         <img src="/ellie.gif" alt="something" className="kanye" />
         <div className="hero-text">
-          <h1 className="subtitulo" style={{color: textos}}>Bem-Vindo!</h1>
-          <p className="texto" style={{color: textos}}>Olá! Meu nome é João e eu venho estudando desenvolvimento de sistemas
+          <h1 className="subtitulo">Bem-Vindo!</h1>
+          <p className="texto">Olá! Meu nome é João e eu venho estudando desenvolvimento de sistemas
             a algum tempo e recentemente eu tive a ideia de criar esse site para armazenar meus projetos e ideias.
 
           </p>
-          <p className="textosecundario" style={{color: textos}}>
+          <p className="textosecundario">
             Sinta-se livre para testar e acompanhar minha jornada conforme meus conhecimentos vão se expandindo na área!
           </p>
           <span></span>
@@ -124,7 +134,7 @@ console.log(claro)
             Clique na barrinha no canto superior esquerdo da página e teste meus projetos!
 
           </p>
-          <p className="texto3" style={{color: textos}}>
+          <p className="texto3">
             *Todos os projetos (e esse site) são um WIP
           </p>
          

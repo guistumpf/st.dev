@@ -1,0 +1,56 @@
+body.light{
+    background-color: #EEEEEE;
+}
+
+body.light .subtitulo{
+    color: black;
+}
+
+body.light .texto{
+    color: black;
+}
+
+body.light .textosecundario{
+    color: #747171;
+}
+
+body.light .texto3{
+    color: black;
+}
+
+body.light .head{
+    background-color: #d6d2d2;
+    color: black;
+}
+
+body.light .linha{
+    background-color: black;
+}
+
+body.light .menu-lateral{
+background-color: #F0F0F0;
+}
+
+body.light .navtext{
+    color: black;
+}
+body.light .navtext:hover{
+     color: #22C55E;
+}
+
+body.light .contato{
+    color: black;
+}
+body.light 
+.github,
+.zapfoda,
+.vercel,
+.iconfont {
+  filter: brightness(0) invert(0%);
+  transition: 0.2s;
+}
+
+body.light .github:hover{
+  filter: brightness(0) saturate(100%) invert(57%) sepia(78%) saturate(433%) hue-rotate(86deg) brightness(96%) contrast(95%);
+  transform: scale(1.1);
+}
