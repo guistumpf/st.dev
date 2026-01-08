@@ -12,7 +12,6 @@ import "./claro.css"
 export default function App() {
 
   const [menuaberto, setmenu] = useState<any>(false)
-const [imagem, setimagem]  = useState<any>(0)
 const [claro, setclaro] = useState(false);
 const [carregado, setCarregado] = useState(false);
 
@@ -30,7 +29,7 @@ useEffect(() => {
   if (!carregado) return;
 
   document.body.classList.toggle("light", claro);
-  localStorage.setItem("theme", claro ? "light" : "dark");
+  localStorage.setItem("themecontador", claro ? "light" : "dark");
 }, [claro, carregado]);
 
 
@@ -39,10 +38,7 @@ const imagens = [
   '/dark-mode-6682.png'
 ]
 
-const proximaimagem = () => {
-  setimagem((prevIndex: any) => (prevIndex + 1 ) % imagens.length)
-claro1()
-}
+const imagemAtual = claro ? imagens[1] : imagens[0];
 
 
   let cor
@@ -60,15 +56,12 @@ claro1()
     cor = "pink"
   }
 
-function claro1(){
-  setclaro(prevtrue => !prevtrue)
-}
-
 
 console.log(claro)
 
   return (
     <>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
       <link rel="icon" href="/e1497514ab168e36120bb64668dbc7af.ico" sizes="any" />
       <button className={`hamburguer ${menuaberto && 'aberto'}`} onClick={mudarmenu}>
         <span className="linha"></span>
@@ -108,11 +101,11 @@ console.log(claro)
 
       <section>
         <h1 className="head">st.dev</h1>
-    <Image  src={imagens[imagem]}
+    <Image  src={imagemAtual}
     alt="pi"
     width={45}
     height={45} style={{cursor: "pointer"}}
-    onClick={proximaimagem}
+ onClick={() => setclaro(prev => !prev)}
     className="tema"/>
     
       </section>

@@ -19,7 +19,7 @@ body.light .texto3{
 }
 
 body.light .head{
-    background-color: #d6d2d2;
+    background-color: #f3f3f4;
     color: black;
 }
 
@@ -41,16 +41,12 @@ body.light .navtext:hover{
 body.light .contato{
     color: black;
 }
-body.light 
-.github,
-.zapfoda,
-.vercel,
-.iconfont {
-  filter: brightness(0) invert(0%);
-  transition: 0.2s;
-}
 
-body.light .github:hover{
-  filter: brightness(0) saturate(100%) invert(57%) sepia(78%) saturate(433%) hue-rotate(86deg) brightness(96%) contrast(95%);
+
+body.light .github:hover,
+.zapfoda:hover,
+.vercel:hover,
+.iconfont:hover {
+  filter: brightness(0);
   transform: scale(1.1);
 }
