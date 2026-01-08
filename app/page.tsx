@@ -102,7 +102,7 @@ console.log(claro)
     <Image  src={imagemAtual}
     alt="pi"
     width={45}
-    height={45} style={{cursor: "pointer"}}
+    height={45}
  onClick={() => setclaro(prev => !prev)}
     className="tema"/>
     

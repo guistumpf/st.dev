@@ -1,0 +1,30 @@
+.light .bodyporra{
+    background-color: #F9FAFB;
+
+}
+.light .back{
+    filter: brightness(0);
+}
+
+.light .caixaconv{
+    background-color: #F8FAFC;
+
+}
+
+.light .conv{
+    color: black;
+}
+
+.light .sub{
+    color: rgb(69, 68, 68);
+}
+
+.light .val{
+    border: 2px solid rgb(125, 123, 123);
+    background-color: #aab9c9;
+    color: black
+}
+
+.light .rel{
+    color: rgb(17, 0, 255)
+}
