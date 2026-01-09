@@ -2,6 +2,8 @@
 import { useState, useEffect } from "react";
 import "./index5.css"
 import { useRouter } from "next/navigation";
+import Image from "next/image";
+import "./pptlight.css"
 
 export default function PPT() {
     //#region // Estados
@@ -15,7 +17,33 @@ export default function PPT() {
     const [vitorias, setvitorias] = useState(0)
     const [empates, setempates] = useState(0)
     const [derrotas, setderrotas] = useState(0)
-    //#endregion
+ const [claro, setclaro] = useState(false);
+const [carregado, setCarregado] = useState(false);
+
+
+useEffect(() => {
+  const salvo = localStorage.getItem("theme: ppt");
+  if (salvo) {
+    setclaro(salvo === "light");
+  }
+  setCarregado(true);
+}, []);
+
+
+useEffect(() => {
+  if (!carregado) return;
+
+  document.body.classList.toggle("light", claro);
+  localStorage.setItem("theme: ppt", claro ? "light" : "dark");
+}, [claro, carregado]);
+
+
+const imagens = [
+  '/light-mode-svgrepo-com (3).png',
+  '/dark-mode-6682.png'
+]
+
+const imagemAtual = claro ? imagens[1] : imagens[0];
     
     const router = useRouter()
     
@@ -111,7 +139,13 @@ return () => clearTimeout(timer)
 
     return (
         <div className="pptbody">
-
+    <Image  src={imagemAtual}
+    alt="pi"
+    width={45}
+    height={45}
+ onClick={() => setclaro(prev => !prev)}
+    className="tema"/>
+    
             <img src="klipartz.com.png" alt="voltar" className='back' onClick={() => router.back()} />
             <div className="pptdi">
                 <h1 className="h1ppt">Pedra, Papel e Tesoura</h1>
