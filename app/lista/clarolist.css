@@ -1,0 +1,15 @@
+.light .corpo1{
+    background: #d9d9dc ;
+}
+.light .Container{
+    background-color: #EDF2F7;
+    color: black;
+}
+
+.light .li {
+    color: black;
+}
+
+.light .back{
+    filter: brightness(0);
+}

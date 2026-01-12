@@ -1,0 +1,29 @@
+.light .pptbody{
+    background: #F5F5DC;
+}
+
+.light .pptdi{
+    background: #F0F2F5;
+    color: black;
+}
+
+.light .h32{
+    color: black;
+}
+
+.light .pedra,
+.light .papel,
+.light .tesoura{
+background-color: rgb(107, 104, 104);
+border-color: black;
+}
+
+.light .pedra:hover,
+.light .papel:hover,
+.light .tesoura:hover{
+    background-color: white;
+}
+
+.light .placar{
+    background: #121212;
+}

@@ -1,0 +1,31 @@
+.light .dadocorpo{
+    background: #f9f9fc;
+}
+
+.light .dadodiv{
+    background-color: rgb(105, 106, 109);
+}
+
+.light .dadobut{
+background-color: rgb(255, 255, 255);
+color: black;
+}
+
+.light .pdado{
+    color: #FFFF;
+}
+
+.light .dadobut:hover{
+    color: #e0dcdc;
+    background-color: #121212;
+    cursor: pointer;
+}
+
+.light .dadobut:disabled{
+background-color: grey;
+cursor: default;
+}
+
+.light .back{
+    filter: brightness(0);
+}
