@@ -36,6 +36,12 @@ const imagens = [
   '/dark-mode-6682.png'
 ]
 
+const imagenstela = [
+  "/ellie.gif",
+'/3906a67b32828494b57d6769194976af (1).png'
+]
+
+const imagemAtual1 = claro ? imagenstela[1] : imagenstela[0];
 const imagemAtual = claro ? imagens[1] : imagens[0];
 
 
@@ -108,7 +114,13 @@ console.log(claro)
     
       </section>
       <div className="hero">
-        <img src="/ellie.gif" alt="something" className="kanye" />
+        <Image
+        src={imagemAtual1}
+        width={300}
+        height={350}
+        alt="blabla"
+        className="kanye"
+        />
         <div className="hero-text">
           <h1 className="subtitulo">Bem-Vindo!</h1>
           <p className="texto">Olá! Meu nome é João e eu venho estudando desenvolvimento de sistemas

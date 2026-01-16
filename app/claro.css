@@ -57,3 +57,7 @@ body.light .iconfont,
 body.light .zapfoda{
     filter: brightness(0);
 }
+
+body.light .kanye{
+    border: none;
+}
