@@ -92,6 +92,8 @@ section {
 .kanye {
   width: 300px;
   height: 350px;
+  border-radius: 10px;
+  border:  1 solid white;
 }
 
 
