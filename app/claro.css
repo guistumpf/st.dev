@@ -61,3 +61,13 @@ body.light .zapfoda{
 body.light .kanye{
     border: none;
 }
+
+body.light .heroui-btn{
+    color: var(--foreground, #111);
+  border: 1px solid   var(--border-default, #000000);
+}
+
+body.light .menu-btn{
+    color: #000;
+    border: #000;
+}

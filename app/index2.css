@@ -249,3 +249,58 @@ section {
   opacity: 0;
   transform: rotate(90deg) scale(0.8);
 }
+
+.heroui-btn {
+    position: absolute;
+  bottom: 25px;
+  right : 15px;
+  gap: 0.5rem;
+  min-width: 5rem;
+  height: 2.5rem;
+  padding: 0 1rem;
+  background: transparent;
+  color: var(--foreground, #ffffff);
+  border: 1px solid   var(--border-default, #ffffff);
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    opacity 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.heroui-btn:hover {
+  opacity: 0.85;
+}
+
+
+
+.menu-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 2.5rem;
+  padding: 0 1rem;
+  margin: 0.25rem;
+
+  border-radius: 0.5rem;
+  border: 1px solid #e4e4e7;
+  background: transparent;
+
+  font-size: 0.875rem;
+  cursor: pointer;
+color: white;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.menu-btn:hover {
+  background: #323233;
+}
+
+.menu-btn:active {
+  transform: scale(0.97);
+}

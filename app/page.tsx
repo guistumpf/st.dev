@@ -6,6 +6,8 @@ import "./index2.css"
 import "./responsivo.css"
 import Image from "next/image"
 import "./claro.css"
+import {  Dropdown,  DropdownTrigger,  DropdownMenu,  DropdownSection,  DropdownItem} from "@heroui/dropdown";
+import {Button, ButtonGroup} from "@heroui/button";
 
 export default function App() {
 
@@ -102,6 +104,17 @@ console.log(claro)
         </div>
       </nav>
 
+ <Dropdown>
+      <DropdownTrigger className="lingua">
+        <Button variant="bordered" className="heroui-btn"  disableRipple>Open Menu</Button>
+      </DropdownTrigger>
+      <DropdownMenu aria-label="Static Actions" className="heroui-menu"  itemClasses={{
+    base: "menu-btn"
+  }}>
+        <DropdownItem key="new">New file</DropdownItem>
+      </DropdownMenu>
+    </Dropdown>
+  
 
       <section>
         <h1 className="head">st.dev</h1>
