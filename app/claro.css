@@ -69,5 +69,10 @@ body.light .heroui-btn{
 
 body.light .menu-btn{
     color: #000;
-    border: #000;
+    border-color: #000000;  
+}
+
+body.light .menu-btn:hover{
+    background-color: #121212;
+    color: white;
 }
