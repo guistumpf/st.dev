@@ -161,17 +161,6 @@ console.log(ingles)
         </div>
       </nav>
 
- <Dropdown>
-      <DropdownTrigger className="lingua">
-        <Button variant="bordered" className="heroui-btn"  disableRipple>{buttontext} | <ReactCountryFlag  svg countryCode={ingles ? "US" : "BR"}/></Button>
-      </DropdownTrigger>
-      <DropdownMenu aria-label="Static Actions" className="heroui-menu"  itemClasses={{
-    base: "menu-btn"
-  }}>
-        <DropdownItem key="new" onClick={() => {setingles(false)}}><ReactCountryFlag countryCode="BR" svg/> |  {idioma2}</DropdownItem>
-        <DropdownItem key="ingles" onClick={() => {setingles(true)}}> <ReactCountryFlag countryCode="US" svg/> | {idioma1}</DropdownItem>
-      </DropdownMenu>
-    </Dropdown>
   
 
       <section>
@@ -212,6 +201,20 @@ console.log(ingles)
          
         </div>
       </div>
+    <div className="lingua">
+
+ <Dropdown >
+      <DropdownTrigger>
+        <Button variant="bordered" className="heroui-btn"  disableRipple>{buttontext} | <ReactCountryFlag  svg countryCode={ingles ? "US" : "BR"}/></Button>
+      </DropdownTrigger>
+      <DropdownMenu aria-label="Static Actions" className="heroui-menu"  itemClasses={{
+    base: "menu-btn"
+  }}>
+        <DropdownItem key="new" onClick={() => {setingles(false)}}><ReactCountryFlag countryCode="BR" svg/> |  {idioma2}</DropdownItem>
+        <DropdownItem key="ingles" onClick={() => {setingles(true)}}> <ReactCountryFlag countryCode="US" svg/> | {idioma1}</DropdownItem>
+      </DropdownMenu>
+    </Dropdown>
+</div>
     </>
   )
 
