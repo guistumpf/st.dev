@@ -6,13 +6,72 @@ import "./index2.css"
 import "./responsivo.css"
 import Image from "next/image"
 import "./claro.css"
+import {  Dropdown,  DropdownTrigger,  DropdownMenu,  DropdownSection,  DropdownItem} from "@heroui/dropdown";
+import {Button, ButtonGroup} from "@heroui/button";
+import ReactCountryFlag from "react-country-flag";
 
 export default function App() {
 
   const [menuaberto, setmenu] = useState<any>(false)
 const [claro, setclaro] = useState(false);
 const [carregado, setCarregado] = useState(false);
+const [ingles, setingles] = useState(false)
 
+let Tarefas
+let dado
+let contador
+let ppt 
+let conversor
+
+const texto3 = ingles
+  ? "*All the apps (and this website) are a WIP"
+  : "*Todos os projetos (e esse site) são um WIP"
+
+const titulo = ingles
+? "Welcome!"
+: "Bem-Vindo!"
+
+const buttontext = ingles
+? "Language"
+: "Idioma"
+
+const idioma1 = ingles
+? "English"
+: "Inglês"
+ 
+const idioma2 = ingles
+?"Portuguese"
+:"Português"
+
+if(ingles){
+  Tarefas = "To do list"
+  contador = "Counter"
+  dado = "Roll the dice"
+  ppt = "RPS"
+  conversor = "Fahrenheit Converter"
+} else{
+  Tarefas = "Lista de Tarefas"
+  contador = "Contador"
+  dado = "Role um dado"
+ppt = "PPT"
+conversor = "Conversor"
+}
+
+const texto1 = ingles 
+?"Hi! My name is João and i have been studying software development for some time and recently i had the idea to create this website to store my project and ideas."
+:"Olá! Meu nome é João e eu venho estudando desenvolvimento de sistemas a algum tempo e recentemente eu tive a ideia de criar esse site para armazenar meus projetos e ideias."
+
+const text2 = ingles
+?"Feel free to test and follow my journey as my knowledge expands!"
+:"Sinta-se livre para testar e acompanhar minha jornada conforme meus conhecimentos vão se expandindo na área!"
+
+const texto2meio = ingles
+?"Click on the bar in the upper left corner of the page and test my projects!"
+:"Clique na barrinha no canto superior esquerdo da página e teste meus projetos!"
+
+const redes = ingles
+?"Social Media"
+:"Redes Sociais"
 
 useEffect(() => {
   const salvo = localStorage.getItem("theme");
@@ -62,7 +121,7 @@ const imagemAtual = claro ? imagens[1] : imagens[0];
 
 
 console.log(claro)
-
+console.log(ingles)
   return (
     <>
  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
@@ -74,13 +133,13 @@ console.log(claro)
       </button>
 
       <nav className={classmenu}>
-        <Link href={"/lista"} className="navtext">Lista de Tarefas</Link>
-        <Link href={"/contador"} className="navtext">Contador</Link>
-        <Link href={"/conversor"} className="navtext">Conversor</Link>
-        <Link href={"/ppt"} className="navtext">PPT</Link>
-        <Link href={"/dado"} className="navtext">Role um dado</Link>
+        <Link href={"/lista"} className="navtext">{Tarefas}</Link>
+        <Link href={"/contador"} className="navtext">{contador}</Link>
+        <Link href={"/conversor"} className="navtext">{conversor}</Link>
+        <Link href={"/ppt"} className="navtext">{ppt}</Link>
+        <Link href={"/dado"} className="navtext">{dado}</Link>
         <h1 className="navtext"></h1>
-        <h1 className="contato">Redes Sociais</h1>
+        <h1 className="contato">{redes}</h1>
         <div className="box-icones">
      
 
@@ -102,6 +161,7 @@ console.log(claro)
         </div>
       </nav>
 
+  
 
       <section>
         <h1 className="head">st.dev</h1>
@@ -122,27 +182,39 @@ console.log(claro)
         className="kanye"
         />
         <div className="hero-text">
-          <h1 className="subtitulo">Bem-Vindo!</h1>
-          <p className="texto">Olá! Meu nome é João e eu venho estudando desenvolvimento de sistemas
-            a algum tempo e recentemente eu tive a ideia de criar esse site para armazenar meus projetos e ideias.
-
+          <h1 className="subtitulo">{titulo}</h1>
+          <p className="texto">
+          {texto1}
           </p>
           <p className="textosecundario">
-            Sinta-se livre para testar e acompanhar minha jornada conforme meus conhecimentos vão se expandindo na área!
+           {text2}
           </p>
           <span></span>
           <span></span>
           <span></span>
           <p className="texto2" >
-            Clique na barrinha no canto superior esquerdo da página e teste meus projetos!
-
+            {texto2meio}
           </p>
           <p className="texto3">
-            *Todos os projetos (e esse site) são um WIP
+            {texto3}
           </p>
          
         </div>
       </div>
+    <div className="lingua">
+
+ <Dropdown >
+      <DropdownTrigger>
+        <Button variant="bordered" className="heroui-btn"  disableRipple>{buttontext} | <ReactCountryFlag  svg countryCode={ingles ? "US" : "BR"}/></Button>
+      </DropdownTrigger>
+      <DropdownMenu aria-label="Static Actions" className="heroui-menu"  itemClasses={{
+    base: "menu-btn"
+  }}>
+        <DropdownItem key="new" onClick={() => {setingles(false)}}><ReactCountryFlag countryCode="BR" svg/> |  {idioma2}</DropdownItem>
+        <DropdownItem key="ingles" onClick={() => {setingles(true)}}> <ReactCountryFlag countryCode="US" svg/> | {idioma1}</DropdownItem>
+      </DropdownMenu>
+    </Dropdown>
+</div>
     </>
   )
 
