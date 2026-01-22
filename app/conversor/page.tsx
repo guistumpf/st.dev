@@ -5,6 +5,7 @@ import "./index4.css"
 import { useRouter } from "next/navigation"
 import Image from "next/image"
 import "./claroconv.css"
+import ReactCountryFlag from "react-country-flag"
 
 
 export default function Conv(){
@@ -12,7 +13,25 @@ const [claro, setclaro] = useState(false)
 const [input,setinput] = useState<any>("")
 const number = parseFloat(input)
 const router = useRouter()
-const [carregado, setCarregado] = useState(false);
+const [carregado, setCarregado] = useState(false)
+const [titulo, settitulo] = useState("")
+const [pais, setpais] = useState("") 
+const [sub, setsub] = useState("")
+
+    useEffect(() => {
+    const idioma = localStorage.getItem("idioma")
+if(idioma === "english"){
+    settitulo("Temperature Converter")
+    setpais ("US")
+   setsub("Convert °F to °C")
+} else {
+    settitulo("Conversor de temperaturas")
+setpais("BR")
+setsub("Converta °F para °C")
+}
+})
+
+
 
 
 useEffect(() => {
@@ -60,13 +79,14 @@ className="tema"
 />
   <img src="klipartz.com.png" alt="voltar" className='back' onClick={() => router.back()}/> 
     <section className="caixaconv">
-      <h1 className="conv">Conversor de temperaturas</h1>
-      <p className="sub">Converta °F para °C</p>
+      <h1 className="conv">{titulo}</h1>
+      <p className="sub">{sub}</p>
       <input type="number" onChange={(e) => {
         setinput(e.target.value) 
       }} className="val" placeholder="°F" />
       <p className="rel">Celsius: {real}</p>
     </section>
+    <ReactCountryFlag countryCode={pais} svg  className="pais"/>
       </div>
   )
 }

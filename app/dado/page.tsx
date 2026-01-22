@@ -14,6 +14,8 @@ export default function Dados() {
     const [carregado, setCarregado] = useState(false);
 
 
+
+
 useEffect(() => {
   const salvo = localStorage.getItem("theme: dado");
   if (salvo) {
