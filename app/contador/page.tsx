@@ -5,6 +5,7 @@ import { use, useEffect, useState } from "react"
 import Image from "next/image"
 import "./clarocont.css"
 import App from "../page"
+import ReactCountryFlag from "react-country-flag"
 
 export default function Contador() {
 
@@ -14,7 +15,7 @@ export default function Contador() {
     const [claro, setclaro] = useState(false);
     const [carregadot, setCarregadot] = useState(false);
  const [titulo, settitulo] = useState("")
-
+const [pais, setpais] = useState ("") 
 
     const STORAGE_KEY = "theme:contador";
 
@@ -22,8 +23,10 @@ useEffect(() => {
     const idioma = localStorage.getItem("idioma")
 if(idioma === "english"){
     settitulo("Counter")
+    setpais ("US")
 } else {
     settitulo("Contador")
+setpais("BR")
 }
 })
 
@@ -109,7 +112,10 @@ if(idioma === "english"){
                     <button onClick={minus} className="porrinha">➖</button>
                 </section>
                 <img src="klipartz.com.png" alt="voltar" className='back1' onClick={() => router.back()} />
+            <ReactCountryFlag countryCode={pais} svg  className="pais" width={40} height={100}/>
             </div>
+
+
         </>
     )
 
