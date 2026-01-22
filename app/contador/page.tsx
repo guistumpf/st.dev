@@ -4,6 +4,7 @@ import "./index3.css"
 import { use, useEffect, useState } from "react"
 import Image from "next/image"
 import "./clarocont.css"
+import App from "../page"
 
 export default function Contador() {
 
@@ -12,7 +13,21 @@ export default function Contador() {
     const [carregado, setCarregado] = useState(false);
     const [claro, setclaro] = useState(false);
     const [carregadot, setCarregadot] = useState(false);
+ const [titulo, settitulo] = useState("")
+
+
     const STORAGE_KEY = "theme:contador";
+
+useEffect(() => {
+    const idioma = localStorage.getItem("idioma")
+if(idioma === "english"){
+    settitulo("Counter")
+} else {
+    settitulo("Contador")
+}
+})
+
+
 
 
     useEffect(() => {
@@ -87,11 +102,11 @@ export default function Contador() {
                     className="tema" />
 
                 <section className="section">
-                    <h1 className="titulo">Contador</h1>
+                    <h1 className="titulo">{titulo}</h1>
                     <p style={{ color: cor }} className="numero">{numero}</p>
-                    <button onClick={add} className="porrinha" title="Adicionar">➕</button>
-                    <button onClick={reset} className="porrinha" title="Resetar">🔃</button>
-                    <button onClick={minus} className="porrinha" title="Diminuir">➖</button>
+                    <button onClick={add} className="porrinha" >➕</button>
+                    <button onClick={reset} className="porrinha">🔃</button>
+                    <button onClick={minus} className="porrinha">➖</button>
                 </section>
                 <img src="klipartz.com.png" alt="voltar" className='back1' onClick={() => router.back()} />
             </div>
