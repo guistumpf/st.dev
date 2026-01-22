@@ -104,3 +104,9 @@ cursor: pointer;
     color: #ef4444;
   transform: scale(1.2);
 }
+
+.pais{
+   position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
