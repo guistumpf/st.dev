@@ -10,17 +10,39 @@ import ReactCountryFlag from "react-country-flag"
 export default function Dados() {
  
     
-    const [result, setresult] = useState("🎲")
+  const [result, setresult] = useState("🎲")
+
     const [bloqueado, setblock] = useState(false)
     const [claro, setclaro] = useState(false)
-    const [carregado, setCarregado] = useState(false);
-const [titulo, settitulo] = useState("")
-const [pais, setpais] = useState("") 
-const [sub, setsub] = useState("")
-const [button, setbutton] = useState("")
-const [resultext, setresul] = useState("")
+    const [carregado, setCarregado] = useState(false)
+    
 
- 
+    const [titulo, settitulo] = useState("Jogue o Dado!")
+    const [pais, setpais] = useState("BR")
+    const [sub, setsub] = useState("Clique no botão para jogar!")
+    const [button, setbutton] = useState("Jogar o Dado")
+    const [resultext, setresul] = useState("Você tirou ")
+
+    
+    
+
+    useEffect(() => {
+       
+        const idiomaSalvo = localStorage.getItem("idioma")
+        
+        if (idiomaSalvo === "english") {
+            settitulo("Roll the Dice!")
+            setpais("US")
+            setsub("Click on the button to play it!")
+            setbutton("Throw the Dice!")
+            setresul("You get ")
+        } 
+    
+
+        setCarregado(true);
+    }, [])
+
+
 
 
 
@@ -49,13 +71,13 @@ useEffect(() => {
         const randoma = Math.floor(Math.random() * 6)
         const resultado = dados[randoma]
         const dadoreal = randoma + 1
-
+setsub(resultext + dadoreal + "!")
         setresult(resultado)
         console.log(resultado)
 
         setTimeout(() => {
             setblock(false)
-          
+          setsub(button)
             setresult("🎲")
         }, 1700)
     }
@@ -81,8 +103,8 @@ className="tema"
             <div className="dadodiv">
                 <h1 className="dadotitulo" >{titulo}</h1>
                 <h1 className="dadosra">{result}</h1>
-                <button disabled={bloqueado} onClick={random} className="dadobut" title="Jogar!">{sub}</button>
-                <p className="pdado"></p>
+                <button disabled={bloqueado} onClick={random} className="dadobut" title="Jogar!">{button}</button>
+                <p className="pdado">{sub}</p>
             </div>
 
 
