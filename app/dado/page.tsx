@@ -8,10 +8,9 @@ import "./dadoclaro.css"
 import ReactCountryFlag from "react-country-flag"
 
 export default function Dados() {
-    const idioma = localStorage.getItem("idioma")
+ 
     
     const [result, setresult] = useState("🎲")
-    const [text, settext] = useState(idioma === "english" ? "Click on the button to play it!" : "Clique no botão para jogar!" )
     const [bloqueado, setblock] = useState(false)
     const [claro, setclaro] = useState(false)
     const [carregado, setCarregado] = useState(false);
@@ -21,22 +20,7 @@ const [sub, setsub] = useState("")
 const [button, setbutton] = useState("")
 const [resultext, setresul] = useState("")
 
-    useEffect(() => {
-    const idioma = localStorage.getItem("idioma")
-if(idioma === "english"){
-    settitulo("Roll the Dice!")
-    setpais ("US")
-   setsub("Throw It!")
-setbutton("Click on the button to play it!")
-setresul("You get ")
-} else {
-    settitulo("Jogue o Dado!")
-setpais("BR")
-setsub("Jogar o Dado!")
-setbutton("Clique no botão para jogar!")
-setresul("Você tirou ")
-}
-})
+ 
 
 
 
@@ -66,13 +50,12 @@ useEffect(() => {
         const resultado = dados[randoma]
         const dadoreal = randoma + 1
 
-        settext(resultext + dadoreal + "!")
         setresult(resultado)
         console.log(resultado)
 
         setTimeout(() => {
             setblock(false)
-            settext(button)
+          
             setresult("🎲")
         }, 1700)
     }
@@ -99,7 +82,7 @@ className="tema"
                 <h1 className="dadotitulo" >{titulo}</h1>
                 <h1 className="dadosra">{result}</h1>
                 <button disabled={bloqueado} onClick={random} className="dadobut" title="Jogar!">{sub}</button>
-                <p className="pdado">{text}</p>
+                <p className="pdado"></p>
             </div>
 
 
