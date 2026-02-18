@@ -18,6 +18,7 @@ const [titulo, settitulo] = useState("")
 const [placeholder, setplace] = useState("")
 const [pais, setpais] = useState("")
 const [aviso,setaviso] = useState("")
+const [avisoadd, setadd] = useState("")
 
 
 useEffect(() => {
@@ -27,11 +28,13 @@ if(idioma === "english"){
     setpais ("US")
     setplace("Write a task!")
     setaviso("Are you sure you want to clear all tasks?")
+setadd("Write a task")
 } else {
     settitulo("Lista de tarefas")
 setpais("BR")
 setplace("Escreva uma tarefa!")
 setaviso("Tem certeza que deseja apagar tudo?")
+setadd("Digite uma tarefa")
 }
 })
 
@@ -68,7 +71,7 @@ useEffect(() => {
 
   function add() {
     if (input.trim() === "") {
-      alert("Digite Uma Tarefa")
+    alert(avisoadd)
       return
     }
 
