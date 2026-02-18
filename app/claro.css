@@ -27,15 +27,19 @@ body.light .linha{
     background-color: black;
 }
 
+.hamburguer:hover .linha{
+  background-color: #974242;
+}
+
 body.light .menu-lateral{
-background-color: #F0F0F0;
+background-color: #dbd8d8;
 }
 
 body.light .navtext{
     color: black;
 }
 body.light .navtext:hover{
-     color: #22C55E;
+     color: #b84545;
 }
 
 body.light .contato{

@@ -14,8 +14,9 @@ export default function App() {
 
   const [menuaberto, setmenu] = useState<any>(false)
 const [claro, setclaro] = useState(false);
-const [carregado, setCarregado] = useState(false);
 const [ingles, setingles] = useState(false)
+const [carregado, setCarregado] = useState(false);
+  const [carregadoidioma, setidioma] = useState(false)
 
 let Tarefas
 let dado
@@ -72,6 +73,21 @@ const texto2meio = ingles
 const redes = ingles
 ?"Social Media"
 :"Redes Sociais"
+
+
+    useEffect(() => {
+    const idiomaSalvo = localStorage.getItem("idioma");
+    if (idiomaSalvo) {
+      setingles(idiomaSalvo === "english");
+    }
+    setidioma(true);
+  }, []);
+  
+  useEffect(() => {
+    if (!carregadoidioma) return;
+    localStorage.setItem("idioma", ingles ? "english" : "portuguese");
+  }, [ingles, carregadoidioma]);
+
 
 useEffect(() => {
   const salvo = localStorage.getItem("theme");

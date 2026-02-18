@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useEffect, useState } from "react"
 import Image from 'next/image';
 import "./clarolist.css"
+import ReactCountryFlag from 'react-country-flag';
 export default function oi() {
 
   const [tarefas, settarefas] = useState<string[]>([])
@@ -13,7 +14,29 @@ export default function oi() {
   const router = useRouter();
   const[claro, setclaro] = useState(false)
 const [carregado, setCarregado] = useState(false);
+const [titulo, settitulo] = useState("")
+const [placeholder, setplace] = useState("")
+const [pais, setpais] = useState("")
+const [aviso,setaviso] = useState("")
+const [avisoadd, setadd] = useState("")
 
+
+useEffect(() => {
+    const idioma = localStorage.getItem("idioma")
+if(idioma === "english"){
+    settitulo("To do list")
+    setpais ("US")
+    setplace("Write a task!")
+    setaviso("Are you sure you want to clear all tasks?")
+setadd("Write a task")
+} else {
+    settitulo("Lista de tarefas")
+setpais("BR")
+setplace("Escreva uma tarefa!")
+setaviso("Tem certeza que deseja apagar tudo?")
+setadd("Digite uma tarefa")
+}
+})
 
 useEffect(() => {
   const salvo = localStorage.getItem("theme: lista");
@@ -48,7 +71,7 @@ useEffect(() => {
 
   function add() {
     if (input.trim() === "") {
-      alert("Digite Uma Tarefa")
+    alert(avisoadd)
       return
     }
 
@@ -64,7 +87,7 @@ const dados: any = {
   }
 
   function excluir() {
-    const confirmed = confirm("Tem certeza que deseja apagar tudo?")
+    const confirmed = confirm(aviso)
 
     if (confirmed) {
       settarefas([])
@@ -101,24 +124,25 @@ className='tema'
 
         <img src="klipartz.com.png" alt="voltar" className='back' onClick={() => router.back()} />
         <section className='Container'>
-          <h1>Lista De Tarefas</h1>
+          <h1>{titulo}</h1>
           <input value={input} onChange={(e) => {
             setinput(e.target.value)
             console.log(e.target.value)
-          }} placeholder='Digite Uma Tarefa!'></input>
-          <button onClick={add} className='add' title='Adicionar tarefa'>Add</button>
+          }} placeholder={placeholder}></input>
+          <button onClick={add} className='add' >Add</button>
           <ul>
             {tarefas.map((tarefas: any, index) => (
               <li key={tarefas.id} className='li'>
                 {tarefas.text}
-                <button className='btnex' onClick={() => ex({ index })} title='Excluir tarefa'>X</button>
+                <button className='btnex' onClick={() => ex({ index })} >X</button>
               </li>
             ))}
           </ul>
           {tarefas.length > 1 && (
-            <button onClick={excluir} className='del' title='Apagar Lista'>🗑️</button>
+            <button onClick={excluir} className='del' >🗑️</button>
           )}
         </section>
+      <ReactCountryFlag countryCode={pais} svg className='pais'/>
       </div>
     </>
 
