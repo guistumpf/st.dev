@@ -25,3 +25,5 @@ React
 CSS
 
 Vercel (deploy)
+
+HeroUi
