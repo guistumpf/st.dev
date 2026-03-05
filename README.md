@@ -1,12 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ST.DEV
 
-## Sobre o Projeto
 
-Eu criei o projeto para servir como um "hub" dos meus codigos em next.
+Aplicação desenvolvida com Next.js como hub de projetos.
 
-O projeto ainda tá em desenvolvimento e a versão V1 dele ja foi criada e lançada.
+Deploy: [sty-dev.vercel.app](https://sty-dev.vercel.app/)  
+Repositório: [github.com/guistumpf/st.dev](https://github.com/guistumpf/st.dev)
 
-Ainda tem muitas ideias que eu quero aplicar.
+Sobre o projeto
 
-https://sty-dev.vercel.app/
 
+O projeto foi criado para centralizar aplicações simples e demonstrar minha evolução no desenvolvimento frontend. 
+A proposta é aprender e salvar minhas aplicações conforme minha evolução no aprendizado de next.js e tecnologias parecidas
+
+O projeto está em desenvolvimento contínuo.
+
+Tecnologias utilizadas:
+
+Next.js
+
+TypeScript
+
+React
+
+CSS
+
+Vercel (deploy)
+
+HeroUi
