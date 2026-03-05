@@ -10,6 +10,7 @@ import {  Dropdown,  DropdownTrigger,  DropdownMenu,  DropdownSection,  Dropdown
 import {Button, ButtonGroup} from "@heroui/button";
 import ReactCountryFlag from "react-country-flag";
 
+
 export default function App() {
 
   const [menuaberto, setmenu] = useState<any>(false)
@@ -112,8 +113,8 @@ const imagens = [
 ]
 
 const imagenstela = [
-  "/ellie.gif",
-'/3906a67b32828494b57d6769194976af (1).png'
+  "/adda.gif",
+'/klassny-klassni-klassny.gif'
 ]
 
 const imagemAtual1 = claro ? imagenstela[1] : imagenstela[0];

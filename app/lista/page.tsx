@@ -75,13 +75,10 @@ useEffect(() => {
       return
     }
 
-const dados: any = {
-  text: input, 
-  id: Date.now()
-}
 
 
-    settarefas([...tarefas, dados])
+
+    settarefas([...tarefas, input])
     setinput("")
 
   }
@@ -132,8 +129,8 @@ className='tema'
           <button onClick={add} className='add' >Add</button>
           <ul>
             {tarefas.map((tarefas: any, index) => (
-              <li key={tarefas.id} className='li'>
-                {tarefas.text}
+              <li key={index} className='li'>
+                {tarefas}
                 <button className='btnex' onClick={() => ex({ index })} >X</button>
               </li>
             ))}

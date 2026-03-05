@@ -10,8 +10,11 @@
   },
   "dependencies": {
     "@heroui/button": "^2.2.29",
+    "@heroui/drawer": "^2.2.28",
     "@heroui/dropdown": "^2.3.29",
     "@heroui/react": "^2.8.7",
+    "@heroui/system": "^2.4.27",
+    "@heroui/theme": "^2.4.26",
     "@vercel/analytics": "^1.6.1",
     "framer-motion": "^12.26.2",
     "next": "16.0.10",
